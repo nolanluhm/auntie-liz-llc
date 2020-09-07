@@ -107,4 +107,49 @@ public class AuthenticationController {
         model.addAttribute("title", "Log In");
         return "login";
     }
+
+    @PostMapping("/login")
+    public String processLoginForm(@ModelAttribute @Valid LoginFormDTO loginFormDTO,
+                                   Errors errors, HttpServletRequest request,
+                                   Model model) {
+
+        if (errors.hasErrors()) {
+            model.addAttribute("title", "Log In");
+            return "login";
+        }
+
+        // Retrieves the User object with the given password form the database
+        User theUser = userRepository.findByUsername(loginFormDTO.getUsername());
+
+
+        // If no such user exists, register a custom error and return the form
+        if (theUser == null) {
+            errors.rejectValue("username", "user.invalid", "The given username does not exist");
+            model.addAttribute("title", "Log In");
+            return "login";
+        }
+
+        // Retrieves the submitted password from the form DTO
+        String password = loginFormDTO.getPassword();
+
+
+        // If the password is incorrect, register a custom error and return the form.
+        // Password verification uses the User.isMatchingPassword() method, which handles the details associated with checking hashed passwords
+        if (!theUser.isMatchingPassword(password)) {
+            errors.rejectValue("password", "password.invalid", "Invalid password");
+            model.addAttribute("title", "Log In");
+            return "login";
+        }
+
+        // Given user exists and the submitted password is correct. Create a new session for the user
+        setUserInSession(request.getSession(), theUser);
+
+        return "redirect:";
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request){
+        request.getSession().invalidate();
+        return "redirect:/login";
+    }
 }
