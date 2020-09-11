@@ -14,17 +14,30 @@
 
 <header th:fragment="header">
     <h1>Auntie Liz LLC</h1>
+    <ul class="nav" style="float:right">
+        <li class="nav-item"><a class="nav-link" href="/logout">Log out</a></li>
+    </ul>
     <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/schedule-appointment">Schedule Appointment</a></li>
         <li class="nav-item"><a class="nav-link" href="/services-and-pricing">Services & Pricing</a></li>
         <li class="nav-item"><a class="nav-link" href="/reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact-information">Contact Information</a></li>
         <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
         <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
-        <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
     </ul>
 </header>
 
+<footer th:fragment="footer">
+    <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/schedule-appointment">Schedule Appointment</a></li>
+        <li class="nav-item"><a class="nav-link" href="/services-and-pricing">Services & Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="/reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact-information">Contact Information</a></li>
+        <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
+    </ul>
+</footer>
 </body>
 </html>
