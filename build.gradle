@@ -27,6 +27,9 @@ dependencies {
 	implementation 'org.springframework.security:spring-security-crypto'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	compile 'com.google.api-client:google-api-client:1.30.10'
+	compile 'com.google.oauth-client:google-oauth-client-jetty:1.31.0'
+	compile 'com.google.apis:google-api-services-calendar:v3-rev411-1.25.0'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
