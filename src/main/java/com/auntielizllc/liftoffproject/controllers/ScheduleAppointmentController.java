@@ -10,4 +10,5 @@ public class ScheduleAppointmentController {
     public String displayScheduleAppointment () {
         return "schedule_appointment";
     }
+
 }
