@@ -34,4 +34,4 @@ out/
 .vscode/
 
 ### Google Credentials ###
-credentials.json
+credentials.json/
