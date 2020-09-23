@@ -21,11 +21,6 @@ public class BusinessInformationController {
         return "services_and_pricing";
     }
 
-    @GetMapping("about")
-    public String displayAboutPage () {
-        return "about";
-    }
-
     @GetMapping("faq")
     public String displayFaqPage () {
         return "faq";
