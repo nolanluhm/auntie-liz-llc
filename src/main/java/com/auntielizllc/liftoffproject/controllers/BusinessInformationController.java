@@ -11,6 +11,11 @@ public class BusinessInformationController {
         return "index";
     }
 
+    @GetMapping("schedule-appointment")
+    public String displayScheduleAppointment() {
+        return "schedule_appointment";
+    }
+
     @GetMapping("contact-information")
     public String displayContactInformationPage () {
         return "contact_information";
