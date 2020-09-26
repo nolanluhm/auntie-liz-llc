@@ -5,7 +5,10 @@
 
 <header th:replace="fragments :: header"></header>
 
-<p>Schedule Appointment placeholder.</p>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/auntielizllc/60min" style="min-width:320px;height:630px;"></div>
+<script type="text/javascript" th:src="@{https://assets.calendly.com/assets/external/widget.js}"></script>
+<!-- Calendly inline widget end -->
 
 <footer th:replace="fragments :: footer"></footer>
 
