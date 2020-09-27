@@ -5,3 +5,8 @@ header {
 .error {
     color: red;
 }
+
+h3 {
+    text-align: center;
+    color: #78ab46;
+}
