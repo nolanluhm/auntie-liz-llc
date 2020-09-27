@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
-<body class="container">
+<body>
 
 <header th:replace="fragments :: header"></header>
 
-<h3>About Auntie Liz, LLC</h3>
-<div style="display: flex;">
-    <img th:src="@{/brown-dog-with-towel.jpg}" alt="Wet, brown dog drying its paws off with a towel."/>
-    <figcaption>Photo courtesy of <a href="https://unsplash.com/photos/ikv10lHZUas">Jamie Street</a></figcaption>
-    <p>Auntie Liz, LLC is a small business that offers professional housekeeping and pet sitting services to clients in St. Louis and the surrounding
-        areas. After contacting me with an appointment request, you will be assigned a housekeeper and we will finalize your appointment day and time.
-        When your housekeeper arrives, they will start by cleaning all of your windows. Then they will dust, disinfect, and wipe down surfaces in each
-        room. For bathrooms, your housekeeper will work their way from top to bottom and end with cleaning the toilet. Floors (whether hardwood, tile,
-        linoleum, or carpeting) will be completed last. Those that opt for emptying waste cans will have this service completed from room-to-room.
-        All cleaning supplies and equipment will be provided by Auntie Liz, LLC unless otherwise requested. Pet sitting details will be worked out with
-        the client beforehand because every pet is different!
+<div class="container">
+    <h3>About Auntie Liz, LLC</h3>
+    <div style="display: flex; justify-content: flex-start; align-items: center;">
+        <div style="margin-right: 20px;">
+            <img th:src="@{/brown-dog-with-towel.jpg}" alt="Wet, brown dog drying its paws off with a towel." style="height: 300px;"/>
+            <figcaption>Photo courtesy of <a href="https://unsplash.com/photos/ikv10lHZUas">Jamie Street</a></figcaption>
+        </div>
+        <p>Auntie Liz, LLC is a small business that offers professional housekeeping and pet sitting services to clients in St. Louis and the surrounding
+                areas. After contacting me with an appointment request, you will be assigned a housekeeper and we will finalize your appointment day and time.
+                When your housekeeper arrives, they will start by cleaning all of your windows. Then they will dust, disinfect, and wipe down surfaces in each
+                room. For bathrooms, your housekeeper will work their way from top to bottom and end with cleaning the toilet. Floors (whether hardwood, tile,
+                linoleum, or carpeting) will be completed last. Those that opt for emptying waste cans will have this service completed from room-to-room.
+                All cleaning supplies and equipment will be provided by Auntie Liz, LLC unless otherwise requested. Pet sitting details will be worked out with
+                the client beforehand because every pet is different!
+        </p>
+    </div>
+
+    <h3>About the Owner:</h3>
+    <p>Hello everyone and thank you for visiting my website! While working my way through college, I took on some cleaning and odd jobs. After
+        achieving my MBA, I realized that working for a big corporation was not a good fit for me. I decided to start my own housekeeping and pet
+        sitting business because I enjoyed the relationships I made with my first couple of clients. I require a flexible schedule due to family
+        commitments and health conditions, so starting my own business was a logical fit for my lifestyle. I find that helping others, whether it be
+        through housekeeping or not, to be a fulfilling way to lead my life. Animals have always been my passion, whether it was working as a
+        veterinary technician for many years or choosing this new career path. Having recently just come into business in June of 2020, I will admit
+        that there is a learning curve to owning my own business and gaining clientele. COVID 19 has also provided its own, unique challenges.
+        My goal is to eventually hire multiple housekeepers and expand my business, but I can’t do it without your help. Thank you again for your
+        consideration!
     </p>
 </div>
-
-<h3>About the Owner:</h3>
-<p>Hello everyone and thank you for visiting my website! While working my way through college, I took on some cleaning and odd jobs. After
-    achieving my MBA, I realized that working for a big corporation was not a good fit for me. I decided to start my own housekeeping and pet
-    sitting business because I enjoyed the relationships I made with my first couple of clients. I require a flexible schedule due to family
-    commitments and health conditions, so starting my own business was a logical fit for my lifestyle. I find that helping others, whether it be
-    through housekeeping or not, to be a fulfilling way to lead my life. Animals have always been my passion, whether it was working as a
-    veterinary technician for many years or choosing this new career path. Having recently just come into business in June of 2020, I will admit
-    that there is a learning curve to owning my own business and gaining clientele. COVID 19 has also provided its own, unique challenges.
-    My goal is to eventually hire multiple housekeepers and expand my business, but I can’t do it without your help. Thank you again for your
-    consideration!
-</p>
 
 <footer th:replace="fragments :: footer"></footer>
 
