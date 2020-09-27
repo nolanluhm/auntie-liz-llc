@@ -12,22 +12,27 @@ public class BusinessInformationController {
     }
 
     @GetMapping("schedule-appointment")
-    public String displayScheduleAppointment() {
+    public String displayScheduleAppointmentPage() {
         return "schedule_appointment";
     }
 
     @GetMapping("contact-information")
-    public String displayContactInformationPage () {
+    public String displayContactInformationPage() {
         return "contact_information";
     }
 
     @GetMapping("services-and-pricing")
-    public String displayServicesAndPricingPage () {
+    public String displayServicesAndPricingPage() {
         return "services_and_pricing";
     }
 
+    @GetMapping("testimonials")
+    public String displayTestimonialsPage() {
+        return "testimonials";
+    }
+
     @GetMapping("faq")
-    public String displayFaqPage () {
+    public String displayFaqPage() {
         return "faq";
     }
 }
