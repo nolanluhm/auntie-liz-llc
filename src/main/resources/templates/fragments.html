@@ -18,27 +18,23 @@
 </head>
 <body>
 
-<header th:fragment="header">
-    <nav class="navbar navbar expand-lg navbar-light bg-light">
-        <div class="container">
-            <div class="navbar-header">
-                <h1>Auntie Liz, LLC</h1>
+<header th:fragment="header" style="margin-bottom: 15px; background-color: #9EA3A3;">
+    <div class="navbar-brand">
+        <h1>Auntie Liz, LLC</h1>
 <!--                <ul class="nav" style="float:right">-->
 <!--                    <li class="nav-item"><a class="nav-link" href="/logout">Log out</a></li>-->
 <!--                </ul>-->
-            </div>
-            <div id="navbar">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" th:href="@{/schedule-appointment}">Schedule Appointment</a></li>
-                    <li class="nav-item"><a class="nav-link" th:href="@{/services-and-pricing}">Services & Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" th:href="@{/reviews}">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" th:href="@{/contact-information}">Contact Information</a></li>
-                    <li class="nav-item"><a class="nav-link" th:href="@{/login}">Login</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    </div>
+    <div id="navbar" class="container">
+        <ul class="nav" style="justify-content: center;">
+            <li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/schedule-appointment}">Schedule Appointment</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/services-and-pricing}">Services & Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/testimonials}">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/contact-information}">Contact Information</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/login}">Login</a></li>
+        </ul>
+    </div>
 </header>
 
 <footer th:fragment="footer" style="display: flex;">
@@ -48,7 +44,7 @@
         <li class="nav-item"><a class="nav-link" th:href="@{/services-and-pricing}">Services & Pricing</a></li>
     </ul>
     <ul class="nav flex-column">
-        <li class="nav-item"><a class="nav-link" th:href="@{/reviews}">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/testimonials}">Testimonials</a></li>
         <li class="nav-item"><a class="nav-link" th:href="@{/contact-information}">Contact Information</a></li>
         <li class="nav-item"><a class="nav-link" th:href="@{/faq}">FAQ</a></li>
     </ul>
