@@ -10,7 +10,7 @@ header {
 
 footer {
     text-align:center;
-    background: #9EA3A3;
+    background-color: #9EA3A3;
     display: flex;
     left: 0;
     bottom: 0;
@@ -22,7 +22,7 @@ footer {
 
 h1 {
     font-family: 'Lobster', cursive;
-    color: green;
+    color: #14592C;
 }
 
 h3 {
