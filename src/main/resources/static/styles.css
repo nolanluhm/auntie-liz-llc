@@ -41,3 +41,12 @@ h5 {
 .nav li a:hover {
     color: blue;
 }
+
+.question-and-answer {
+    border-bottom: 1px solid black;
+    padding-block-start: 10px;
+}
+
+.question-and-answer h6 {
+    font-weight: bold;
+}
