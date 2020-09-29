@@ -30,6 +30,10 @@ h3 {
     color: #78ab46;
 }
 
+h5 {
+    font-weight: bold;
+}
+
 .nav li a {
     color: black;
 }
