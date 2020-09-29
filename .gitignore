@@ -32,7 +32,3 @@ out/
 
 ### VS Code ###
 .vscode/
-
-### Google Credentials ###
-credentials.json
-/tokens
