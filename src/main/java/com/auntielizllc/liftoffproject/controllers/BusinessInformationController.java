@@ -1,13 +1,15 @@
 package com.auntielizllc.liftoffproject.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class BusinessInformationController {
 
     @GetMapping
-    public String displayHomePage() {
+    public String displayHomePage(Model model) {
+
         return "index";
     }
 
