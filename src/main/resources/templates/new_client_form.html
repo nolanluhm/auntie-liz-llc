@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+    <body>
+        <header th:replace="fragments :: header"></header>
+
+        <div class="container">
+            <h3>Auntie Liz, LLC New Client Form</h3>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputFirstName">First Name</label>
+                        <input type="text" class="form-control" id="inputFirstName" placeholder="Jane">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputLastName">Last Name</label>
+                        <input type="text" class="form-control" id="inputLastName" placeholder="Doe">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St.">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="St. Louis">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <input type="text" class="form-control" id="inputState" placeholder="Missouri">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip" placeholder="63121">
+                    </div>
+                </div>
+                <hr/>
+
+                <p>Options for services rendered (choose all that apply):</p>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="generalHousekeeping">
+                        <label class="form-check-label" for="generalHousekeeping">General housekeeping</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="laundry">
+                        <label class="form-check-label" for="laundry">Laundry</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dishes">
+                        <label class="form-check-label" for="dishes">Dishes</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="carpetShampooing">
+                        <label class="form-check-label" for="carpetShampooing">Carpet Shampooing</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="wallCleaning">
+                        <label class="form-check-label" for="wallCleaning">Wall Cleaning</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="carWash">
+                        <label class="form-check-label" for="carWash">Car wash</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="petNailTrim">
+                        <label class="form-check-label" for="petNailTrim">Pet nail trim</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="petEarCleaning">
+                        <label class="form-check-label" for="petEarCleaning">Pet ear cleaning</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="petAnalGlandExpression">
+                        <label class="form-check-label" for="petAnalGlandExpression">Pet anal gland expression</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="petMedicine">
+                        <label class="form-check-label" for="petMedicine">Assistance with pet medicine</label>
+                    </div>
+                </div>
+
+                <p>When you would like services to be rendered?</p>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="desiredServiceTime" id="oneTime" value="oneTime" checked>
+                    <label class="form-check-label" for="oneTime">One time</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="desiredServiceTime" id="monthly" value="monthly">
+                    <label class="form-check-label" for="monthly">Monthly</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="desiredServiceTime" id="weekly" value="weekly">
+                    <label class="form-check-label" for="weekly">Weekly</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="desiredServiceTime" id="other" value="other">
+                    <label class="form-check-label" for="other">Other</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="cleaningAndPetInstruction">Preferences for cleaning and pet care instructions (an example might be non-harsh,
+                    "green" products only or skip a certain area of the house)</label>
+                    <textarea class="form-control" id="cleaningAndPetInstruction" rows="6"></textarea>
+                </div>
+
+                <p>Options for payment: cash, check, Venmo, PayPal, Facebook Messenter, payment plans</p>
+
+                <p>Do you qualify for one of my offered discounts? (choose all that apply):</p>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="isNursingHomeEmployee">
+                        <label class="form-check-label" for="isNursingHomeEmployee">Nursing home employee</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="isVeteran">
+                        <label class="form-check-label" for="isVeteran">Veteran</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="isSenior">
+                        <label class="form-check-label" for="isSenior">Senior citizen</label>
+                    </div>
+                </div>
+
+                <h5>Disclosures:</h5>
+                <p>Time estimates will be strictly adhered to if that is expressed as a concern beforehand, but depending on the level of cleanliness,
+                may go under or over the estimated time frame.</p>
+                <p>Due to family commitments or personal health reasons, there may be times where I will have to cancel or reschedule services.
+                Although inconvenient, Auntie Liz, LLC is a small business that came to creation for a better work-life balance. Signing this form
+                indicates that you've read and understood our work agreement.</p>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputClientSignature" placeholder="Sign here..." style="font-weight: bold; font-size: 1.25rem;">Client signature:</label>
+                        <input type="text" class="form-control" id="inputClientSignature" placeholder="Jane Doe">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-bottom: 17px;">Submit</button>
+            </form>
+
+        </div>
+
+        <footer th:replace="fragments :: footer"></footer>
+    </body>
+</html>
