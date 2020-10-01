@@ -9,7 +9,6 @@ public class BusinessInformationController {
 
     @GetMapping
     public String displayHomePage(Model model) {
-
         return "index";
     }
 
@@ -36,5 +35,10 @@ public class BusinessInformationController {
     @GetMapping("faq")
     public String displayFaqPage() {
         return "faq";
+    }
+
+    @GetMapping("schedule-appointment/new-client-form")
+    public String displayNewClientFormPage() {
+        return "new_client_form";
     }
 }
