@@ -9,11 +9,8 @@ header {
 }
 
 footer {
-    text-align:center;
     background-color: #9EA3A3;
     display: flex;
-    left: 0;
-    bottom: 0;
 }
 
 .error {
@@ -49,4 +46,9 @@ h5 {
 
 .question-and-answer h6 {
     font-weight: bold;
+}
+
+#footer-title {
+    justify-content: center;
+    align-items: center;
 }
