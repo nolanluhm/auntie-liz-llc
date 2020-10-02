@@ -31,6 +31,10 @@ h5 {
     font-weight: bold;
 }
 
+h6 {
+    font-weight: bold;
+}
+
 .nav li a {
     color: black;
 }
