@@ -1,16 +1,16 @@
-@font-face {
-    font-family: 'Lobster', cursive;
-}
-
 header {
     text-align: center;
-    margin-bottom: 15px;
     background-color: #9EA3A3;
 }
 
 footer {
     background-color: #9EA3A3;
     display: flex;
+    min-height: (100vh - 226px);
+}
+
+.main-content{
+    padding-top: 15px;
 }
 
 .error {
@@ -56,4 +56,9 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.client-photos {
+    height: 100px;
+    width: 90px;
 }

@@ -21,9 +21,6 @@
         <header th:fragment="header">
             <div class="navbar-brand">
                 <h1>Auntie Liz, LLC</h1>
-        <!--                <ul class="nav" style="float:right">-->
-        <!--                    <li class="nav-item"><a class="nav-link" href="/logout">Log out</a></li>-->
-        <!--                </ul>-->
             </div>
             <div id="navbar" class="container">
                 <ul class="nav" style="justify-content: center;">
@@ -33,26 +30,27 @@
                     <li class="nav-item"><a class="nav-link" th:href="@{/testimonials}">Testimonials</a></li>
                     <li class="nav-item"><a class="nav-link" th:href="@{/contact-information}">Contact Information</a></li>
                     <li class="nav-item"><a class="nav-link" th:href="@{/faq}">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" th:href="@{/login}">Login</a></li>
                 </ul>
             </div>
         </header>
 
         <footer th:fragment="footer">
-
-            <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" th:href="@{/schedule-appointment}">Schedule Appointment</a></li>
-                <li class="nav-item"><a class="nav-link" th:href="@{/services-and-pricing}">Services & Pricing</a></li>
-            </ul>
-            <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link" th:href="@{/testimonials}">Testimonials</a></li>
-                <li class="nav-item"><a class="nav-link" th:href="@{/contact-information}">Contact Information</a></li>
-                <li class="nav-item"><a class="nav-link" th:href="@{/faq}">FAQ</a></li>
-            </ul>
+            <div>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/schedule-appointment}">Schedule Appointment</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/services-and-pricing}">Services & Pricing</a></li>
+                </ul>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" th:href="@{/testimonials}">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/contact-information}">Contact Information</a></li>
+                    <li class="nav-item"><a class="nav-link" th:href="@{/faq}">FAQ</a></li>
+                </ul>
+            </div>
             <div id="footer-title">
                 <h1>Auntie Liz, LLC</h1>
             </div>
+            <div></div>
 
         </footer>
     </body>
