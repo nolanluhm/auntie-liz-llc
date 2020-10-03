@@ -39,6 +39,6 @@ public class NewClientController {
         NewClient newClient = new NewClient(newClientFormDTO.getFirstName(), newClientFormDTO.getLastName());
         newClientRepository.save(newClient);
 
-        return "redirect:";
+        return "redirect:"; 
     }
 }

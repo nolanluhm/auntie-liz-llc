@@ -49,4 +49,5 @@ public class NewClient extends AbstractEntity {
     public int getZipCode() {
         return zipCode;
     }
+
 }
