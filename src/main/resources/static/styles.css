@@ -3,14 +3,9 @@ header {
     background-color: #9EA3A3;
 }
 
-footer {
-    background-color: #9EA3A3;
-    display: flex;
-    min-height: (100vh - 226px);
-}
-
 .main-content{
     padding-top: 15px;
+    min-height: calc(100vh - 226px);
 }
 
 .error {
@@ -52,10 +47,21 @@ h6 {
     font-weight: bold;
 }
 
-#footer-title {
+footer {
+    background-color: #9EA3A3;
     display: flex;
-    justify-content: center;
+}
+
+.footer-section-side {
+    display: flex;
+    width: 30%;
+}
+
+.footer-section-middle {
+    flex: 1 0 0%;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .client-photos {
