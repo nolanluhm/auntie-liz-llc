@@ -35,9 +35,4 @@ public class BusinessInformationController {
     public String displayFaqPage() {
         return "faq";
     }
-
-    @GetMapping("schedule-appointment/new-client-form")
-    public String displayNewClientFormPage() {
-        return "new_client_form";
-    }
 }

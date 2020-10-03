@@ -4,49 +4,57 @@
     <body>
         <header th:replace="fragments :: header"></header>
 
-        <div class="container">
+        <div class="container main-content">
             <h3>Auntie Liz, LLC New Client Form</h3>
-            <form>
+            <form method="post">
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputFirstName">First Name</label>
-                        <input type="text" class="form-control" id="inputFirstName" placeholder="Jane">
+                        <label th:for="firstName">First Name</label>
+                        <input class="form-control" th:field="${newClientFormDTO.firstName}" placeholder="Jane">
                     </div>
+                    <p class="error" th:errors="${newClientFormDTO.firstName}"></p>
                     <div class="form-group col-md-6">
-                        <label for="inputLastName">Last Name</label>
-                        <input type="text" class="form-control" id="inputLastName" placeholder="Doe">
+                        <label th:for="lastName">Last Name</label>
+                        <input class="form-control" th:field="${newClientFormDTO.lastName}" placeholder="Doe">
                     </div>
+                    <p class="error" th:errors="${newClientFormDTO.lastName}"></p>
                 </div>
 
                 <div class="form-group">
-                    <label for="inputEmail">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com">
+                    <label th:for="email">Email</label>
+                    <input class="form-control" th:field="${newClientFormDTO.email}" placeholder="example@gmail.com">
+                </div>
+                <p class="error" th:errors="${newClientFormDTO.email}"></p>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label th:for="address">Address</label>
+                        <input class="form-control" th:field="${newClientFormDTO.address}" placeholder="1234 Main St.">
+                    </div>
+                    <p class="error" th:errors="${newClientFormDTO.address}"></p>
+                    <div class="form-group col-md-6">
+                        <label th:for="address2">Address 2</label>
+                        <input class="form-control" th:field="${newClientFormDTO.address2}" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <p class="error" th:errors="${newClientFormDTO.address2}"></p>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St.">
+                        <label th:for="city">City</label>
+                        <input class="form-control" th:field="${newClientFormDTO.city}" placeholder="St. Louis">
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputAddress2">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="St. Louis">
-                    </div>
+                    <p class="error" th:errors="${newClientFormDTO.city}"></p>
                     <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
-                        <input type="text" class="form-control" id="inputState" placeholder="Missouri">
+                        <label th:for="state">State</label>
+                        <input class="form-control" th:field="${newClientFormDTO.state}" placeholder="Missouri">
                     </div>
+                    <p class="error" th:errors="${newClientFormDTO.state}"></p>
                     <div class="form-group col-md-2">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip" placeholder="63121">
+                        <label th:for="zipCode">Zip</label>
+                        <input class="form-control" th:field="${newClientFormDTO.zipCode}" placeholder="63121">
                     </div>
+                    <p class="error" th:errors="${newClientFormDTO.zipCode}"></p>
                 </div>
                 <hr/>
 
@@ -55,70 +63,70 @@
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="generalHousekeeping">
-                        <label class="form-check-label" for="generalHousekeeping">General housekeeping</label>
+                        <label class="form-check-label" th:for="generalHousekeeping">General housekeeping</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="laundry">
-                        <label class="form-check-label" for="laundry">Laundry</label>
+                        <label class="form-check-label" th:for="laundry">Laundry</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="dishes">
-                        <label class="form-check-label" for="dishes">Dishes</label>
+                        <label class="form-check-label" th:for="dishes">Dishes</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="carpetShampooing">
-                        <label class="form-check-label" for="carpetShampooing">Carpet Shampooing</label>
+                        <label class="form-check-label" th:for="carpetShampooing">Carpet Shampooing</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="wallCleaning">
-                        <label class="form-check-label" for="wallCleaning">Wall Cleaning</label>
+                        <label class="form-check-label" th:for="wallCleaning">Wall Cleaning</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="carWash">
-                        <label class="form-check-label" for="carWash">Car wash</label>
+                        <label class="form-check-label" th:for="carWash">Car wash</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="petNailTrim">
-                        <label class="form-check-label" for="petNailTrim">Pet nail trim</label>
+                        <label class="form-check-label" th:for="petNailTrim">Pet nail trim</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="petEarCleaning">
-                        <label class="form-check-label" for="petEarCleaning">Pet ear cleaning</label>
+                        <label class="form-check-label" th:for="petEarCleaning">Pet ear cleaning</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="petAnalGlandExpression">
-                        <label class="form-check-label" for="petAnalGlandExpression">Pet anal gland expression</label>
+                        <label class="form-check-label" th:for="petAnalGlandExpression">Pet anal gland expression</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="petMedicine">
-                        <label class="form-check-label" for="petMedicine">Assistance with pet medicine</label>
+                        <label class="form-check-label" th:for="petMedicine">Assistance with pet medicine</label>
                     </div>
                 </div>
 
@@ -126,19 +134,19 @@
 
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="desiredServiceTime" id="oneTime" value="oneTime" checked>
-                    <label class="form-check-label" for="oneTime">One time</label>
+                    <label class="form-check-label" th:for="oneTime">One time</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="desiredServiceTime" id="monthly" value="monthly">
-                    <label class="form-check-label" for="monthly">Monthly</label>
+                    <label class="form-check-label" th:for="monthly">Monthly</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="desiredServiceTime" id="weekly" value="weekly">
-                    <label class="form-check-label" for="weekly">Weekly</label>
+                    <label class="form-check-label" th:for="weekly">Weekly</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="desiredServiceTime" id="other" value="other">
-                    <label class="form-check-label" for="other">Other</label>
+                    <label class="form-check-label" th:for="other">Other</label>
                 </div>
 
                 <div class="form-group">
@@ -146,6 +154,7 @@
                         (an example might be non-harsh, "green" products only or skip a certain area of the house):</label>
                     <textarea class="form-control" id="cleaningAndPetInstruction" rows="6"></textarea>
                 </div>
+                <p class="error" th:errors="${newClientFormDTO.instructions}"></p>
 
                 <h6>Options for payment:</h6>
                 <p>Cash, check, Venmo, PayPal, Facebook Messenger, payment plans</p>
@@ -155,21 +164,21 @@
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="isNursingHomeEmployee">
-                        <label class="form-check-label" for="isNursingHomeEmployee">Nursing home employee</label>
+                        <label class="form-check-label" th:for="isNursingHomeEmployee">Nursing home employee</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="isVeteran">
-                        <label class="form-check-label" for="isVeteran">Veteran</label>
+                        <label class="form-check-label" th:for="isVeteran">Veteran</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="isSenior">
-                        <label class="form-check-label" for="isSenior">Senior citizen</label>
+                        <label class="form-check-label" th:for="isSenior">Senior citizen</label>
                     </div>
                 </div>
 
@@ -182,9 +191,10 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputClientSignature" style="font-weight: bold; font-size: 1.25rem;">Client signature:</label>
-                        <input type="text" class="form-control" id="inputClientSignature" placeholder="Jane Doe">
+                        <label th:for="signature" style="font-weight: bold; font-size: 1.25rem;">Client signature:</label>
+                        <input class="form-control" th:field="${newClientFormDTO.signature}" placeholder="Jane Doe">
                     </div>
+                    <p class="error" th:errors="${newClientFormDTO.signature}"></p>
                 </div>
                 <button type="submit" class="btn btn-primary" style="margin-bottom: 17px; background-color: #78ab46; border-color: #78ab46;">Submit</button>
             </form>
