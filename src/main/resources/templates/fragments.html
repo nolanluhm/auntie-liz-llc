@@ -35,7 +35,7 @@
         </header>
 
         <footer th:fragment="footer">
-            <div>
+            <div class="footer-section-side">
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" th:href="@{/schedule-appointment}">Schedule Appointment</a></li>
@@ -47,10 +47,8 @@
                     <li class="nav-item"><a class="nav-link" th:href="@{/faq}">FAQ</a></li>
                 </ul>
             </div>
-            <div id="footer-title">
-                <h1>Auntie Liz, LLC</h1>
-            </div>
-            <div></div>
+            <div class="footer-section-middle"><h1>Auntie Liz, LLC</h1></div>
+            <div class="footer-section-side"></div>
 
         </footer>
     </body>
