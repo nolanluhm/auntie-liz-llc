@@ -38,6 +38,10 @@ h6 {
     color: blue;
 }
 
+.new-client-form-question {
+    font-weight: bold;
+}
+
 .question-and-answer {
     border-bottom: 1px solid black;
     padding-block-start: 10px;

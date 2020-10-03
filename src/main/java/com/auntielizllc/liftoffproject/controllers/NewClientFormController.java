@@ -1,6 +1,7 @@
 package com.auntielizllc.liftoffproject.controllers;
 
 import com.auntielizllc.liftoffproject.data.CustomerRepository;
+import com.auntielizllc.liftoffproject.models.AppointmentType;
 import com.auntielizllc.liftoffproject.models.Customer;
 import com.auntielizllc.liftoffproject.models.dto.NewClientFormDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,28 +18,30 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping("schedule-appointment/new-client-form")
-public class CustomerController {
+public class NewClientFormController {
 
     @Autowired
     CustomerRepository customerRepository;
 
     @GetMapping
     public String displayNewClientFormPage(Model model) {
+        model.addAttribute("title", "New Client Form — Auntie Liz, LLC");
         model.addAttribute(new NewClientFormDTO());
+        model.addAttribute("types", AppointmentType.values());
         return "new_client_form";
     }
 
     @PostMapping
     public String processNewClientForm(@ModelAttribute @Valid NewClientFormDTO newClientFormDTO,
-                                       Errors errors, HttpServletRequest request,
-                                       Model model) {
+                                       Errors errors, Model model) {
 
         if (errors.hasErrors()) {
             return "new_client_form";
         }
 
-        Customer newCustomer = new Customer(newClientFormDTO.getFirstName(), newClientFormDTO.getLastName());
-        customerRepository.save(newCustomer);
+//        Customer newCustomer = new Customer(newClientFormDTO.getFirstName(), newClientFormDTO.getLastName(), newClientFormDTO.getEmail(),
+//                                            newClientFormDTO.getPhoneNumber(), newClientFormDTO.getAddress());
+//        customerRepository.save(newCustomer);
 
         return "redirect:"; 
     }

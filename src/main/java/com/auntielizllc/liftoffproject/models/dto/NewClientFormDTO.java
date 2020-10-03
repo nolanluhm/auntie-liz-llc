@@ -1,5 +1,6 @@
 package com.auntielizllc.liftoffproject.models.dto;
 
+import com.auntielizllc.liftoffproject.models.AppointmentType;
 import org.springframework.format.annotation.NumberFormat;
 
 import javax.validation.constraints.Email;
@@ -9,56 +10,61 @@ import javax.validation.constraints.Size;
 
 public class NewClientFormDTO {
 
-    @NotNull
-    @NotBlank
+    @NotNull(message = "Name is required.")
+    @NotBlank(message = "Name is required.")
     @Size(min = 2, max = 20, message = "Please enter a name between 2 and 20 characters long.")
     private String firstName;
 
-    @NotNull
-    @NotBlank
+    @NotNull(message = "Name is required.")
+    @NotBlank(message = "Name is required.")
     @Size(min = 2, max = 30, message = "Please enter a name between 2 and 30 characters long.")
     private String lastName;
 
-    @NotNull
-    @NotBlank
-    @Email
+    @NotNull(message = "Email is required.")
+    @NotBlank(message = "Email is required.")
+    @Email(message = "Invalid email. Try again.")
     private String email;
 
-    @NotNull
-    @NotBlank
+    @NotNull(message = "Phone number is required.")
+    @NotBlank(message = "Phone number is required.")
+    @Size(min = 10, max = 14, message = "Phone number must be between 10 and 14 characters.")
+    private String phoneNumber;
+
+    @NotNull(message = "Address is required.")
+    @NotBlank(message = "Address is required.")
     private String address;
 
     @Size(max = 30, message = "Please enter an address that is less than 30 characters.")
     private String address2;
 
-    @NotNull
-    @NotBlank
+    @NotNull(message = "City is required.")
+    @NotBlank(message = "City is required.")
     @Size(min = 2, max = 35, message = "Please enter a city between 2 and 35 characters long.")
     private String city;
 
-    @NotNull
-    @NotBlank
+    @NotNull(message = "State is required.")
+    @NotBlank(message = "State is required.")
     @Size(min = 4, max = 12, message = "Please enter a state between 4 and 12 characters long.")
     private String state;
 
-    @NotNull
-    @NotBlank
+    @NotNull(message = "ZIP code is required.")
+    @NotBlank(message = "ZIP code is required.")
     @NumberFormat
     @Size(min = 5, max = 10, message = "Please enter a zip code between 4 and 12 characters long.")
     private String zipCode;
 
-    private Boolean generalHousekeeping;
-    private Boolean laundry;
-    private Boolean dishes;
-    private Boolean carpetShampooing;
-    private Boolean wallCleaning;
-    private Boolean carWash;
-    private Boolean petNailTrim;
-    private Boolean petEarCleaning;
-    private Boolean petAnalGlandExpression;
-    private Boolean petMedicine;
+    private Boolean isGeneralHousekeeping;
+    private Boolean isLaundry;
+    private Boolean isDishes;
+    private Boolean isCarpetShampooing;
+    private Boolean isWallCleaning;
+    private Boolean isCarWash;
+    private Boolean isPetNailTrim;
+    private Boolean isPetEarCleaning;
+    private Boolean isPetAnalGlandExpression;
+    private Boolean isPetMedicine;
 
-    private Boolean desiredServiceTime;
+    private AppointmentType type;
 
     @Size(max = 500, message = "Please enter instructions that are 500 characters or less.")
     private String instructions;
@@ -71,6 +77,8 @@ public class NewClientFormDTO {
     @NotBlank
     @Size(min = 3, max = 75, message = "Please enter a signature that is between 3 and 75 characters.")
     private String signature;
+
+    public NewClientFormDTO() {}
 
     public String getFirstName() {
         return firstName;
@@ -94,6 +102,14 @@ public class NewClientFormDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getAddress() {
@@ -136,88 +152,92 @@ public class NewClientFormDTO {
         this.zipCode = zipCode;
     }
 
-    public Boolean getGeneralHousekeeping() {
-        return generalHousekeeping;
+    public Boolean getIsGeneralHousekeeping() {
+        return isGeneralHousekeeping;
     }
 
-    public void setGeneralHousekeeping(Boolean generalHousekeeping) {
-        this.generalHousekeeping = generalHousekeeping;
+    public void setIsGeneralHousekeeping(Boolean isGeneralHousekeeping) {
+        this.isGeneralHousekeeping = isGeneralHousekeeping;
     }
 
-    public Boolean getLaundry() {
-        return laundry;
+    public Boolean getIsLaundry() {
+        return isLaundry;
     }
 
-    public void setLaundry(Boolean laundry) {
-        this.laundry = laundry;
+    public void setIsLaundry(Boolean isLaundry) {
+        this.isLaundry = isLaundry;
     }
 
-    public Boolean getDishes() {
-        return dishes;
+    public Boolean getIsDishes() {
+        return isDishes;
     }
 
-    public void setDishes(Boolean dishes) {
-        this.dishes = dishes;
+    public void setIsDishes(Boolean isDishes) {
+        this.isDishes = isDishes;
     }
 
-    public Boolean getCarpetShampooing() {
-        return carpetShampooing;
+    public Boolean getIsCarpetShampooing() {
+        return isCarpetShampooing;
     }
 
-    public void setCarpetShampooing(Boolean carpetShampooing) {
-        this.carpetShampooing = carpetShampooing;
+    public void setIsCarpetShampooing(Boolean isCarpetShampooing) {
+        this.isCarpetShampooing = isCarpetShampooing;
     }
 
-    public Boolean getWallCleaning() {
-        return wallCleaning;
+    public Boolean getIsWallCleaning() {
+        return isWallCleaning;
     }
 
-    public void setWallCleaning(Boolean wallCleaning) {
-        this.wallCleaning = wallCleaning;
+    public void setIsWallCleaning(Boolean isWallCleaning) {
+        this.isWallCleaning = isWallCleaning;
     }
 
-    public Boolean getCarWash() {
-        return carWash;
+    public Boolean getIsCarWash() {
+        return isCarWash;
     }
 
-    public void setCarWash(Boolean carWash) {
-        this.carWash = carWash;
+    public void setIsCarWash(Boolean isCarWash) {
+        this.isCarWash = isCarWash;
     }
 
-    public Boolean getPetNailTrim() {
-        return petNailTrim;
+    public Boolean getIsPetNailTrim() {
+        return isPetNailTrim;
     }
 
-    public void setPetNailTrim(Boolean petNailTrim) {
-        this.petNailTrim = petNailTrim;
+    public void setIsPetNailTrim(Boolean isPetNailTrim) {
+        this.isPetNailTrim = isPetNailTrim;
     }
 
-    public Boolean getPetEarCleaning() {
-        return petEarCleaning;
+    public Boolean getIsPetEarCleaning() {
+        return isPetEarCleaning;
     }
 
-    public void setPetEarCleaning(Boolean petEarCleaning) {
-        this.petEarCleaning = petEarCleaning;
+    public void setIsPetEarCleaning(Boolean isPetEarCleaning) {
+        this.isPetEarCleaning = isPetEarCleaning;
     }
 
-    public Boolean getPetAnalGlandExpression() {
-        return petAnalGlandExpression;
+    public Boolean getIsPetAnalGlandExpression() {
+        return isPetAnalGlandExpression;
     }
 
-    public void setPetAnalGlandExpression(Boolean petAnalGlandExpression) {
-        this.petAnalGlandExpression = petAnalGlandExpression;
+    public void setIsPetAnalGlandExpression(Boolean isPetAnalGlandExpression) {
+        this.isPetAnalGlandExpression = isPetAnalGlandExpression;
     }
 
-    public Boolean getPetMedicine() {
-        return petMedicine;
+    public Boolean getIsPetMedicine() {
+        return isPetMedicine;
     }
 
-    public void setPetMedicine(Boolean petMedicine) {
-        this.petMedicine = petMedicine;
+    public void setIsPetMedicine(Boolean isPetMedicine) {
+        this.isPetMedicine = isPetMedicine;
     }
 
-    public Boolean getDesiredServiceTime() {
-        return desiredServiceTime;
+    public AppointmentType getType() {
+        return type;
+    }
+
+    public void setType(AppointmentType type) {
+        this.type = type;
     }
 
     public String getInstructions() {
@@ -228,9 +248,6 @@ public class NewClientFormDTO {
         this.instructions = instructions;
     }
 
-    public void setDesiredServiceTime(Boolean desiredServiceTime) {
-        this.desiredServiceTime = desiredServiceTime;
-    }
 
     public Boolean getNursingHomeEmployee() {
         return isNursingHomeEmployee;

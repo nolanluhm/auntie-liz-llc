@@ -20,11 +20,19 @@
                     <p class="error" th:errors="${newClientFormDTO.lastName}"></p>
                 </div>
 
-                <div class="form-group">
-                    <label th:for="email">Email</label>
-                    <input class="form-control" th:field="${newClientFormDTO.email}" placeholder="example@gmail.com">
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label th:for="email">Email</label>
+                        <input class="form-control" th:field="${newClientFormDTO.email}" placeholder="auntielizllc@gmail.com">
+                    </div>
+                    <p class="error" th:errors="${newClientFormDTO.email}"></p>
+
+                    <div class="form-group col-md-4">
+                        <label th:for="phoneNumber">Phone Number</label>
+                        <input class="form-control" th:field="${newClientFormDTO.phoneNumber}" placeholder="636-495-3499">
+                    </div>
+                    <p class="error" th:errors="${newClientFormDTO.phoneNumber}"></p>
                 </div>
-                <p class="error" th:errors="${newClientFormDTO.email}"></p>
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -51,7 +59,7 @@
                     </div>
                     <p class="error" th:errors="${newClientFormDTO.state}"></p>
                     <div class="form-group col-md-2">
-                        <label th:for="zipCode">Zip</label>
+                        <label th:for="zipCode">ZIP</label>
                         <input class="form-control" th:field="${newClientFormDTO.zipCode}" placeholder="63121">
                     </div>
                     <p class="error" th:errors="${newClientFormDTO.zipCode}"></p>
@@ -63,94 +71,86 @@
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="generalHousekeeping">
-                        <label class="form-check-label" th:for="generalHousekeeping">General housekeeping</label>
+                        <label class="form-check-label" th:for="isGeneralHousekeeping">General housekeeping</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="laundry">
-                        <label class="form-check-label" th:for="laundry">Laundry</label>
+                        <label class="form-check-label" th:for="isLaundry">Laundry</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="dishes">
-                        <label class="form-check-label" th:for="dishes">Dishes</label>
+                        <label class="form-check-label" th:for="isDishes">Dishes</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="carpetShampooing">
-                        <label class="form-check-label" th:for="carpetShampooing">Carpet Shampooing</label>
+                        <label class="form-check-label" th:for="isCarpetShampooing">Carpet Shampooing</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="wallCleaning">
-                        <label class="form-check-label" th:for="wallCleaning">Wall Cleaning</label>
+                        <label class="form-check-label" th:for="isWallCleaning">Wall Cleaning</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="carWash">
-                        <label class="form-check-label" th:for="carWash">Car wash</label>
+                        <label class="form-check-label" th:for="isCarWash">Car wash</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="petNailTrim">
-                        <label class="form-check-label" th:for="petNailTrim">Pet nail trim</label>
+                        <label class="form-check-label" th:for="isPetNailTrim">Pet nail trim</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="petEarCleaning">
-                        <label class="form-check-label" th:for="petEarCleaning">Pet ear cleaning</label>
+                        <label class="form-check-label" th:for="isPetEarCleaning">Pet ear cleaning</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="petAnalGlandExpression">
-                        <label class="form-check-label" th:for="petAnalGlandExpression">Pet anal gland expression</label>
+                        <label class="form-check-label" th:for="isPetAnalGlandExpression">Pet anal gland expression</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="petMedicine">
-                        <label class="form-check-label" th:for="petMedicine">Assistance with pet medicine</label>
+                        <label class="form-check-label" th:for="isPetMedicine">Assistance with pet medicine</label>
                     </div>
                 </div>
 
-                <h6>When you would like services to be rendered?</h6>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="desiredServiceTime" id="oneTime" value="oneTime" checked>
-                    <label class="form-check-label" th:for="oneTime">One time</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="desiredServiceTime" id="monthly" value="monthly">
-                    <label class="form-check-label" th:for="monthly">Monthly</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="desiredServiceTime" id="weekly" value="weekly">
-                    <label class="form-check-label" th:for="weekly">Weekly</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="desiredServiceTime" id="other" value="other">
-                    <label class="form-check-label" th:for="other">Other</label>
+                <div class="form-group">
+                    <label class="new-client-form-question">When would you like services to be rendered?
+                        <select th:field="${newClientFormDTO.type}">
+                            <option th:each="type : ${types}"
+                                    th:value="${type}"
+                                    th:text="${type.displayName}">
+                            </option>
+                        </select>
+                    </label>
                 </div>
 
                 <div class="form-group">
-                    <label for="cleaningAndPetInstruction" style="font-weight: bold;">Preferences for cleaning and pet care instructions
+                    <label th:for="instructions" class="new-client-form-question">Preferences for cleaning and pet care instructions
                         (an example might be non-harsh, "green" products only or skip a certain area of the house):</label>
                     <textarea class="form-control" id="cleaningAndPetInstruction" rows="6"></textarea>
                 </div>
