@@ -51,6 +51,12 @@ h6 {
     font-weight: bold;
 }
 
+.image-and-text {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 footer {
     background-color: #9EA3A3;
     display: flex;
