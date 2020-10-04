@@ -73,8 +73,8 @@ public class NewClientFormDTO {
     private Boolean isVeteran;
     private Boolean isSeniorCitizen;
 
-    @NotNull
-    @NotBlank
+    @NotNull(message = "Signature is required.")
+    @NotBlank(message = "Signature is required.")
     @Size(min = 3, max = 75, message = "Please enter a signature that is between 3 and 75 characters.")
     private String signature;
 
