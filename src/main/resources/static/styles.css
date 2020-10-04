@@ -6,6 +6,7 @@ header {
 .main-content{
     padding-top: 15px;
     min-height: calc(100vh - 226px);
+    margin-bottom: 25px;
 }
 
 .error {
@@ -20,10 +21,6 @@ h1 {
 h3 {
     text-align: center;
     color: #78ab46;
-}
-
-h5 {
-    font-weight: bold;
 }
 
 h6 {
@@ -74,13 +71,7 @@ footer {
     justify-content: center;
 }
 
-.client-photos {
-    height: 100px;
-    width: 90px;
-}
-
 .submit-button {
-    margin-bottom: 17px; 
     background-color: #78ab46; 
     border-color: #78ab46;
 }
@@ -105,7 +96,6 @@ button[type="submit"] {
   }
 
   button[type="submit"]:active {
-    margin-bottom: 17px; 
     background-color: #78ab46; 
     border-color: #78ab46;
   }
@@ -115,7 +105,6 @@ button[type="submit"] {
     max-width: 500px;
     text-align: center;
     padding: 10px;
-    margin-bottom: 17px;
     border-radius: 8px;
     flex: 1 0 0%;
     display: flex;
@@ -144,5 +133,67 @@ button[type="submit"] {
     100% {
       opacity: 0;
       pointer-events: none;
-    }
   }
+}
+
+.testimonial-container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+  
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+  
+@media (max-width: 500px) {
+  .container {
+      text-align: center;
+  }
+  .container img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+
+.client-photo {
+  height: 100px;
+  width: 90px;
+}
+
+.client-name {
+  font-weight: bold;
+  text-align: center;
+}
+
+.client-testimonial {
+  display: flex;
+}
+
+#puppy-banner {
+  width: 1110px; 
+  height: 318px; 
+  border-radius: 0%;
+}
+
+#liz-contact-information-pic {
+  height: 202px; 
+  width: 172px;
+  border-radius: 0%;
+}
