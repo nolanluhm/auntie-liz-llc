@@ -72,3 +72,15 @@ footer {
     height: 100px;
     width: 90px;
 }
+
+.submit-button {
+    margin-bottom: 17px; 
+    background-color: #78ab46; 
+    border-color: #78ab46;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
