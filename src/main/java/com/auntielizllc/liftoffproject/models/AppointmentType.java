@@ -3,8 +3,8 @@ package com.auntielizllc.liftoffproject.models;
 public enum AppointmentType {
 
     SINGLE("One time"),
-    MONTHLY("Monthly"),
     WEEKLY("Weekly"),
+    MONTHLY("Monthly"),
     OTHER("Other");
 
     private final String displayName;

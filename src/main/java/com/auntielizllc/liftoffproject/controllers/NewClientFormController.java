@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 @Controller
@@ -36,12 +35,19 @@ public class NewClientFormController {
                                        Errors errors, Model model) {
 
         if (errors.hasErrors()) {
+            model.addAttribute("title", "New Client Form — Auntie Liz, LLC");
             return "new_client_form";
         }
 
-//        Customer newCustomer = new Customer(newClientFormDTO.getFirstName(), newClientFormDTO.getLastName(), newClientFormDTO.getEmail(),
-//                                            newClientFormDTO.getPhoneNumber(), newClientFormDTO.getAddress());
-//        customerRepository.save(newCustomer);
+        Customer newCustomer = new Customer(newClientFormDTO.getFirstName(), newClientFormDTO.getLastName(), newClientFormDTO.getEmail(),
+                                            newClientFormDTO.getPhoneNumber(), newClientFormDTO.getAddress(), newClientFormDTO.getAddress2(),
+                                            newClientFormDTO.getCity(), newClientFormDTO.getState(), newClientFormDTO.getZipCode(), newClientFormDTO.getGeneralHousekeeping(),
+                                            newClientFormDTO.getLaundry(), newClientFormDTO.getDishes(), newClientFormDTO.getCarpetShampooing(), newClientFormDTO.getWallCleaning(),
+                                            newClientFormDTO.getCarWash(), newClientFormDTO.getPetNailTrim(), newClientFormDTO.getPetEarCleaning(),
+                                            newClientFormDTO.getPetAnalGlandExpression(), newClientFormDTO.getPetMedicine(), newClientFormDTO.getType(),
+                                            newClientFormDTO.getInstructions(), newClientFormDTO.getNursingHomeEmployee(), newClientFormDTO.getVeteran(),
+                                            newClientFormDTO.getSeniorCitizen(), newClientFormDTO.getSignature());
+        customerRepository.save(newCustomer);
 
         return "redirect:"; 
     }

@@ -78,8 +78,6 @@ public class NewClientFormDTO {
     @Size(min = 3, max = 75, message = "Please enter a signature that is between 3 and 75 characters.")
     private String signature;
 
-    public NewClientFormDTO() {}
-
     public String getFirstName() {
         return firstName;
     }
@@ -152,84 +150,84 @@ public class NewClientFormDTO {
         this.zipCode = zipCode;
     }
 
-    public Boolean getIsGeneralHousekeeping() {
+    public Boolean getGeneralHousekeeping() {
         return isGeneralHousekeeping;
     }
 
-    public void setIsGeneralHousekeeping(Boolean isGeneralHousekeeping) {
-        this.isGeneralHousekeeping = isGeneralHousekeeping;
+    public void setGeneralHousekeeping(Boolean generalHousekeeping) {
+        isGeneralHousekeeping = generalHousekeeping;
     }
 
-    public Boolean getIsLaundry() {
+    public Boolean getLaundry() {
         return isLaundry;
     }
 
-    public void setIsLaundry(Boolean isLaundry) {
-        this.isLaundry = isLaundry;
+    public void setLaundry(Boolean laundry) {
+        isLaundry = laundry;
     }
 
-    public Boolean getIsDishes() {
+    public Boolean getDishes() {
         return isDishes;
     }
 
-    public void setIsDishes(Boolean isDishes) {
-        this.isDishes = isDishes;
+    public void setDishes(Boolean dishes) {
+        isDishes = dishes;
     }
 
-    public Boolean getIsCarpetShampooing() {
+    public Boolean getCarpetShampooing() {
         return isCarpetShampooing;
     }
 
-    public void setIsCarpetShampooing(Boolean isCarpetShampooing) {
-        this.isCarpetShampooing = isCarpetShampooing;
+    public void setCarpetShampooing(Boolean carpetShampooing) {
+        isCarpetShampooing = carpetShampooing;
     }
 
-    public Boolean getIsWallCleaning() {
+    public Boolean getWallCleaning() {
         return isWallCleaning;
     }
 
-    public void setIsWallCleaning(Boolean isWallCleaning) {
-        this.isWallCleaning = isWallCleaning;
+    public void setWallCleaning(Boolean wallCleaning) {
+        isWallCleaning = wallCleaning;
     }
 
-    public Boolean getIsCarWash() {
+    public Boolean getCarWash() {
         return isCarWash;
     }
 
-    public void setIsCarWash(Boolean isCarWash) {
-        this.isCarWash = isCarWash;
+    public void setCarWash(Boolean carWash) {
+        isCarWash = carWash;
     }
 
-    public Boolean getIsPetNailTrim() {
+    public Boolean getPetNailTrim() {
         return isPetNailTrim;
     }
 
-    public void setIsPetNailTrim(Boolean isPetNailTrim) {
-        this.isPetNailTrim = isPetNailTrim;
+    public void setPetNailTrim(Boolean petNailTrim) {
+        isPetNailTrim = petNailTrim;
     }
 
-    public Boolean getIsPetEarCleaning() {
+    public Boolean getPetEarCleaning() {
         return isPetEarCleaning;
     }
 
-    public void setIsPetEarCleaning(Boolean isPetEarCleaning) {
-        this.isPetEarCleaning = isPetEarCleaning;
+    public void setPetEarCleaning(Boolean petEarCleaning) {
+        isPetEarCleaning = petEarCleaning;
     }
 
-    public Boolean getIsPetAnalGlandExpression() {
+    public Boolean getPetAnalGlandExpression() {
         return isPetAnalGlandExpression;
     }
 
-    public void setIsPetAnalGlandExpression(Boolean isPetAnalGlandExpression) {
-        this.isPetAnalGlandExpression = isPetAnalGlandExpression;
+    public void setPetAnalGlandExpression(Boolean petAnalGlandExpression) {
+        isPetAnalGlandExpression = petAnalGlandExpression;
     }
 
-    public Boolean getIsPetMedicine() {
+    public Boolean getPetMedicine() {
         return isPetMedicine;
     }
 
-    public void setIsPetMedicine(Boolean isPetMedicine) {
-        this.isPetMedicine = isPetMedicine;
+    public void setPetMedicine(Boolean petMedicine) {
+        isPetMedicine = petMedicine;
     }
 
     public AppointmentType getType() {
@@ -247,7 +245,6 @@ public class NewClientFormDTO {
     public void setInstructions(String instructions) {
         this.instructions = instructions;
     }
-
 
     public Boolean getNursingHomeEmployee() {
         return isNursingHomeEmployee;
