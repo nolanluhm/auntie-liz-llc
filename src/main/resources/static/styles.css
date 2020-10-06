@@ -197,3 +197,9 @@ button[type="submit"] {
   width: 172px;
   border-radius: 0%;
 }
+
+#go-daddy-security-seal {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+}
