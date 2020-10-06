@@ -47,7 +47,7 @@ public class NewClientFormController {
                                             newClientFormDTO.getPetAnalGlandExpression(), newClientFormDTO.getPetMedicine(), newClientFormDTO.getType(),
                                             newClientFormDTO.getInstructions(), newClientFormDTO.getNursingHomeEmployee(), newClientFormDTO.getVeteran(),
                                             newClientFormDTO.getSeniorCitizen(), newClientFormDTO.getSignature());
-        customerRepository.save(newCustomer);
+        customerRepository.save(newCustomer); 
 
         return "redirect:"; 
     }
