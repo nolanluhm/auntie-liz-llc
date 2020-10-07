@@ -144,15 +144,13 @@ button[type="submit"] {
   margin: 16px 0
 }
 
-.container::after {
+.testimonial-container::after {
   content: "";
   clear: both;
   display: table;
 }
   
-.container img {
-  float: left;
-  margin-right: 20px;
+.oval-image {
   border-radius: 50%;
 }
   
@@ -174,6 +172,9 @@ button[type="submit"] {
 .client-photo {
   height: 100px;
   width: 90px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
 }
 
 .client-name {
@@ -188,17 +189,9 @@ button[type="submit"] {
 #puppy-banner {
   display: flex;
   width: 100%;
-  border-radius: 0%;
 }
 
 #liz-contact-information-pic {
   height: 202px; 
   width: 172px;
-  border-radius: 0%;
-}
-
-#go-daddy-security-seal {
-  display: flex;
-  justify-content: right;
-  align-items: flex-end;
 }
