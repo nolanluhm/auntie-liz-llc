@@ -106,7 +106,6 @@ button[type="submit"] {
     border-radius: 8px;
     display: flex;
     justify-content: center;
-    margin-top: 15px;
   }
 
   #status.success {
@@ -116,6 +115,10 @@ button[type="submit"] {
   #status.error {
     background-color: rgb(250, 129, 92);
     color: white;
+  }
+
+  #status-container {
+    margin-top: 15px;
   }
 
   @keyframes status {
