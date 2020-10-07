@@ -101,15 +101,12 @@ button[type="submit"] {
   }
 
 #status {
-    width: 100%;
-    max-width: 500px;
     text-align: center;
     padding: 10px;
     border-radius: 8px;
-    flex: 1 0 0%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 15px;
   }
 
   #status.success {
@@ -157,23 +154,10 @@ button[type="submit"] {
 .container span {
   font-size: 20px;
 }
-  
-@media (max-width: 500px) {
-  .container {
-      text-align: center;
-  }
-  .client-photo {
-      margin: auto;
-      float: none;
-      display: block;
-  }
-}
 
 .client-photo {
   height: 100px;
   width: 90px;
-  float: left;
-  margin-right: 20px;
   border-radius: 50%;
 }
 
