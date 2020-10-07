@@ -158,7 +158,6 @@ button[type="submit"] {
   
 .container span {
   font-size: 20px;
-  margin-right: 15px;
 }
   
 @media (max-width: 500px) {
@@ -187,8 +186,8 @@ button[type="submit"] {
 }
 
 #puppy-banner {
-  width: 1110px; 
-  height: 318px; 
+  display: flex;
+  width: 100%;
   border-radius: 0%;
 }
 
