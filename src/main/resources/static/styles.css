@@ -162,7 +162,7 @@ button[type="submit"] {
   .container {
       text-align: center;
   }
-  .container img {
+  .client-photo {
       margin: auto;
       float: none;
       display: block;
