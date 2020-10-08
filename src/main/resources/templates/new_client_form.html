@@ -11,58 +11,59 @@
             <div class="form-group col-md-6">
                 <label th:for="firstName">First Name</label>
                 <input class="form-control" th:field="${newClientFormDTO.firstName}" placeholder="Jane">
+                <p class="error" th:errors="${newClientFormDTO.firstName}"></p>
             </div>
-            <p class="error" th:errors="${newClientFormDTO.firstName}"></p>
             <div class="form-group col-md-6">
                 <label th:for="lastName">Last Name</label>
                 <input class="form-control" th:field="${newClientFormDTO.lastName}" placeholder="Doe">
+                <p class="error" th:errors="${newClientFormDTO.lastName}"></p>
             </div>
-            <p class="error" th:errors="${newClientFormDTO.lastName}"></p>
+
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-8">
                 <label th:for="email">Email</label>
                 <input class="form-control" th:field="${newClientFormDTO.email}" placeholder="auntielizllc@gmail.com">
+                <p class="error" th:errors="${newClientFormDTO.email}"></p>
             </div>
-            <p class="error" th:errors="${newClientFormDTO.email}"></p>
 
             <div class="form-group col-md-4">
                 <label th:for="phoneNumber">Phone Number</label>
                 <input class="form-control" th:field="${newClientFormDTO.phoneNumber}" placeholder="636-495-3499">
+                <p class="error" th:errors="${newClientFormDTO.phoneNumber}"></p>
             </div>
-            <p class="error" th:errors="${newClientFormDTO.phoneNumber}"></p>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label th:for="address">Address</label>
                 <input class="form-control" th:field="${newClientFormDTO.address}" placeholder="1234 Main St.">
+                <p class="error" th:errors="${newClientFormDTO.address}"></p>
             </div>
-            <p class="error" th:errors="${newClientFormDTO.address}"></p>
             <div class="form-group col-md-6">
                 <label th:for="address2">Address 2</label>
                 <input class="form-control" th:field="${newClientFormDTO.address2}" placeholder="Apartment, studio, or floor">
+                <p class="error" th:errors="${newClientFormDTO.address2}"></p>
             </div>
-            <p class="error" th:errors="${newClientFormDTO.address2}"></p>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label th:for="city">City</label>
                 <input class="form-control" th:field="${newClientFormDTO.city}" placeholder="St. Louis">
+                <p class="error" th:errors="${newClientFormDTO.city}"></p>
             </div>
-            <p class="error" th:errors="${newClientFormDTO.city}"></p>
             <div class="form-group col-md-4">
                 <label th:for="state">State</label>
                 <input class="form-control" th:field="${newClientFormDTO.state}" placeholder="Missouri">
+                <p class="error" th:errors="${newClientFormDTO.state}"></p>
             </div>
-            <p class="error" th:errors="${newClientFormDTO.state}"></p>
             <div class="form-group col-md-2">
                 <label th:for="zipCode">ZIP</label>
                 <input class="form-control" th:field="${newClientFormDTO.zipCode}" placeholder="63121">
+                <p class="error" th:errors="${newClientFormDTO.zipCode}"></p>
             </div>
-            <p class="error" th:errors="${newClientFormDTO.zipCode}"></p>
         </div>
         <hr/>
 
@@ -153,8 +154,8 @@
             <label th:for="instructions" class="new-client-form-question">Preferences for cleaning and pet care instructions
                 (an example might be non-harsh, "green" products only or skip a certain area of the house):</label>
             <textarea class="form-control" id="cleaningAndPetInstruction" th:field="${newClientFormDTO.instructions}" rows="6"></textarea>
+            <p class="error" th:errors="${newClientFormDTO.instructions}"></p>
         </div>
-        <p class="error" th:errors="${newClientFormDTO.instructions}"></p>
 
         <h6>Options for payment:</h6>
         <p>Cash, check, Venmo, PayPal, Facebook Messenger, payment plans</p>
@@ -193,8 +194,8 @@
             <div class="form-group col-md-6">
                 <label th:for="signature" style="font-weight: bold; font-size: 1.25rem;">Client signature:</label>
                 <input class="form-control" th:field="${newClientFormDTO.signature}" placeholder="Jane Doe">
+                <p class="error" th:errors="${newClientFormDTO.signature}"></p>
             </div>
-            <p class="error" th:errors="${newClientFormDTO.signature}"></p>
         </div>
         <button type="submit" class="btn btn-primary submit-button">Submit</button>
     </form>
