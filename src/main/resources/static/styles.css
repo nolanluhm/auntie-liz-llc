@@ -43,12 +43,14 @@ h6 {
   margin-right: 15px; 
   width: 15%; 
   height: auto;
+  flex: 1 0 auto;
 }
 
 #beagle-home-image {
   margin-left: 15px;
   width: 25%;
   height: auto;
+  flex: 1 0 auto;
 }
 
 .new-client-form-question {
@@ -207,6 +209,7 @@ button[type="submit"] {
   width: 15%;
   margin-left: 15%;
   height: auto;
+  flex: 1 0 auto;
 }
 
 .email-form-label {
