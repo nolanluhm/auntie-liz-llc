@@ -13,6 +13,10 @@ header {
     color: red;
 }
 
+p {
+  flex: 1 0 0%;
+}
+
 h1 {
     font-family: 'Lobster', cursive;
     color: #14592C;
@@ -40,17 +44,13 @@ h6 {
 }
 
 #liz-home-image {
-  margin-right: 15px; 
-  width: 15%; 
-  height: auto;
-  flex: 1 0 auto;
+  width: 100%;
+  object-fit: contain;
 }
 
 #beagle-home-image {
-  margin-left: 15px;
-  width: 25%;
-  height: auto;
-  flex: 1 0 auto;
+  width: 140%;
+  object-fit: contain;
 }
 
 .new-client-form-question {
@@ -69,16 +69,42 @@ h6 {
 .image-and-text {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  max-width: 15%;
+  margin-right: 15px;
+  flex: 1 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .image-and-text {
+    justify-content: center;
+  }
+  .image-container {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 }
 
 footer {
     background-color: #9EA3A3;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .footer-section-side {
     display: flex;
     width: 30%;
+}
+
+@media screen and (max-width: 800px) {
+  .footer-section-side {
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .footer-section-middle {
@@ -112,9 +138,10 @@ button[type="submit"] {
     border-color: rgb(214, 226, 236);
   }
 
-  button[type="submit"]:active {
-    background-color: #78ab46; 
-    border-color: #78ab46;
+  button[type="submit"]:active, button[type="submit"]:focus {
+    background-color: #78ab46 !important; 
+    border-color: #78ab46 !important;
+    box-shadow: 0 0 0 .2rem #74CF17 !important;
   }
 
 #status {
@@ -206,10 +233,8 @@ button[type="submit"] {
 }
 
 #liz-contact-information-pic {
-  width: 15%;
-  margin-left: 15%;
-  height: auto;
-  flex: 1 0 auto;
+  width: 100%;
+  object-fit: contain;
 }
 
 .email-form-label {
