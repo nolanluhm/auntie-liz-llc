@@ -156,7 +156,27 @@ button[type="submit"] {
   background-color: #eee;
   border-radius: 5px;
   padding: 16px;
-  margin: 16px 0
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-photo {
+  height: 100px;
+  width: 90px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.client-name {
+  font-weight: bold;
+  text-align: center;
+}
+
+.client-testimonial {
+  display: flex;
+  text-align: left;
 }
 
 .testimonial-container::after {
@@ -171,21 +191,6 @@ button[type="submit"] {
   
 .container span {
   font-size: 20px;
-}
-
-.client-photo {
-  height: 100px;
-  width: 90px;
-  border-radius: 50%;
-}
-
-.client-name {
-  font-weight: bold;
-  text-align: center;
-}
-
-.client-testimonial {
-  display: flex;
 }
 
 #puppy-banner {
