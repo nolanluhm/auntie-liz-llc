@@ -35,6 +35,16 @@ h6 {
     color: blue;
 }
 
+#liz-home-image {
+  margin-right: 15px; 
+  width: 100%; 
+}
+
+#beagle-home-image {
+  margin-left: 15px;
+  width: 125%;
+}
+
 .new-client-form-question {
     font-weight: bold;
 }
@@ -51,7 +61,6 @@ h6 {
 .image-and-text {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
 }
 
 footer {
@@ -178,7 +187,16 @@ button[type="submit"] {
   width: 100%;
 }
 
+#contact-information {
+  display: flex;
+}
+
 #liz-contact-information-pic {
-  height: 202px; 
-  width: 172px;
+  width: 15%;
+  margin-left: 15%;
+}
+
+.email-form-label {
+  font-weight: bold;
+  padding-top: 5px;
 }

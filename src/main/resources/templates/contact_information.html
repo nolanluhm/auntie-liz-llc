@@ -8,15 +8,14 @@
 
 <div class="container main-content">
     <h3>Contact Information</h3>
-    <div class="image-and-text" style="justify-content: flex-start;">
-        <p>Phone: 636-495-3499; please leave a message and someone will get back to you as soon as possible.<br>
-            E-mail: auntielizllc@gmail.com<br>
-            Facebook: <a href="https://www.facebook.com/auntielizllc">https://www.facebook.com/auntielizllc</a><br>
-            Yelp: <a href="https://www.yelp.com/biz/auntie-liz-hillsboro">https://www.yelp.com/biz/auntie-liz-hillsboro</a>
+    <div id="contact-information">
+        <p><b> Phone:</b> 636-495-3499; please leave a message and someone will get back to you as soon as possible.<br>
+            <b>E-mail:</b> auntielizllc@gmail.com<br>
+            <b>Facebook:</b> <a href="https://www.facebook.com/auntielizllc">https://www.facebook.com/auntielizllc</a><br>
+            <b>Yelp:</b> <a href="https://www.yelp.com/biz/auntie-liz-hillsboro">https://www.yelp.com/biz/auntie-liz-hillsboro</a>
         </p>
-        <div style="margin-left: 20px;">
-            <img th:src="@{/liz-images/liz-wiley-foot-propped.jpg}" alt="Photo of Liz Wiley with her foot propped on a bucket of cleaning supplies" id="liz-contact-information-pic"/>
-        </div>
+
+        <img th:src="@{/liz-images/liz-wiley-foot-propped.jpg}" alt="Photo of Liz Wiley with her foot propped on a bucket of cleaning supplies" id="liz-contact-information-pic"/>
     </div>
     <hr>
 
@@ -26,22 +25,22 @@
         <div class="container">
             <form action="https://formspree.io/f/xjvpknwg" method="post" id="email-form">
                 <div class="form-row">
-                    <label for="firstName">First Name</label>
+                    <label for="firstName" class="email-form-label">First Name</label>
                     <input class="form-control" type="text" id="firstName" name="firstName" placeholder="Jane">
                 </div>
 
                 <div class="form-row">
-                    <label for="lastName">Last Name</label>
+                    <label for="lastName" class="email-form-label">Last Name</label>
                     <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Doe">
                 </div>
 
                 <div class="form-row">
-                    <label for="email">Email</label>
+                    <label for="email" class="email-form-label">Email</label>
                     <input class="form-control" type="text" id="email" name="email" placeholder="auntielizllc@gmail.com">
                 </div>
 
                 <div class="form-row">
-                    <label for="message">Message</label>
+                    <label for="message" class="email-form-label">Message</label>
                     <textarea class="form-control" type="text" id="message" name="message" cols="30" rows="10" placeholder="Your message here..."></textarea>
                 </div>
 
