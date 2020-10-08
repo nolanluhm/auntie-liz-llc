@@ -11,6 +11,7 @@ let appName = "Auntie Liz LLC";
 
     function success() {
       form.reset();
+      status.classList.remove('error');
       status.classList.add('success');
       status.innerHTML = "Successfully sent!";
     }
