@@ -32,7 +32,11 @@ h6 {
 }
 
 .nav li a:hover {
-    color: blue;
+    color: lavender;
+}
+
+.nav li a:active {
+  background: #78ab46;
 }
 
 #liz-home-image {
