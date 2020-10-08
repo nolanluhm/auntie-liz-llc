@@ -38,11 +38,13 @@ h6 {
 #liz-home-image {
   margin-right: 15px; 
   width: 100%; 
+  height: auto;
 }
 
 #beagle-home-image {
   margin-left: 15px;
   width: 125%;
+  height: auto;
 }
 
 .new-client-form-question {
@@ -185,6 +187,7 @@ button[type="submit"] {
 #puppy-banner {
   display: flex;
   width: 100%;
+  height: auto;
 }
 
 #contact-information {
@@ -194,6 +197,7 @@ button[type="submit"] {
 #liz-contact-information-pic {
   width: 15%;
   margin-left: 15%;
+  height: auto;
 }
 
 .email-form-label {
