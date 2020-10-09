@@ -43,16 +43,6 @@ h6 {
   background: #78ab46;
 }
 
-#liz-home-image {
-  width: 100%;
-  object-fit: contain;
-}
-
-#beagle-home-image {
-  width: 140%;
-  object-fit: contain;
-}
-
 .new-client-form-question {
     font-weight: bold;
 }
@@ -72,19 +62,42 @@ h6 {
   flex-wrap: wrap;
 }
 
-.image-container {
+#liz-home-image {
+  width: 100%;
+  object-fit: contain;
+}
+
+#beagle-home-image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.image-container-left {
   max-width: 15%;
   margin-right: 15px;
   flex: 1 0 auto;
 }
 
-@media screen and (max-width: 1000px) {
+.image-container-right {
+  max-width: 25%;
+  margin-left: 15px;
+  flex: 1 0 auto;
+}
+
+@media screen and (max-width: 600px) {
   .image-and-text {
     justify-content: center;
   }
-  .image-container {
+  .image-container-left {
     width: 100%;
+    max-width: unset;
     margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .beagle-image-container-right {
+    width: 100%;
+    max-width: unset;
+    margin-left: 0;
     margin-bottom: 15px;
   }
 }
