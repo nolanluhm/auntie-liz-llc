@@ -36,6 +36,7 @@ public class NewClientFormController {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "New Client Form — Auntie Liz, LLC");
+            model.addAttribute("types", AppointmentType.values());
             return "new_client_form";
         }
 
