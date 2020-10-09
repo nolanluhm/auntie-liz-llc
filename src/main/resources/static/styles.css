@@ -84,6 +84,12 @@ h6 {
   flex: 1 0 auto;
 }
 
+#contact-information-image-container {
+  max-width: 25%;
+  margin-left: 15px;
+  flex: 1 0 auto;
+}
+
 @media screen and (max-width: 600px) {
   .image-and-text {
     justify-content: center;
@@ -97,6 +103,11 @@ h6 {
   .image-container-right {
     width: 100%;
     max-width: unset;
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+  #contact-information-image-container {
+    width: 100%;
     margin-left: 0;
     margin-bottom: 15px;
   }
