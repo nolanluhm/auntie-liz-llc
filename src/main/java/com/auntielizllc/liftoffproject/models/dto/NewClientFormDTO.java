@@ -23,6 +23,7 @@ public class NewClientFormDTO {
     @NotNull(message = "Email is required.")
     @NotBlank(message = "Email is required.")
     @Email(message = "Invalid email. Try again.")
+    @Size(max = 40, message = "Please enter an email less than 40 characters long.")
     private String email;
 
     @NotNull(message = "Phone number is required.")
