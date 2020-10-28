@@ -1,16 +1,32 @@
 header {
-    text-align: center;
-    background-color: #9EA3A3;
+  text-align: center;
+  background-color: #9EA3A3;
 }
 
 .main-content{
-    padding-top: 15px;
-    min-height: calc(100vh - 226px);
-    margin-bottom: 25px;
+  padding-top: 15px;
+  min-height: calc(100vh - 226px);
+  margin-bottom: 25px;
 }
 
 .error {
-    color: red;
+  color: red;
+}
+
+a:link {
+  color: #78ab46
+}
+
+a:visited {
+  color: #78ab46;
+}
+
+a:hover {
+  color: #14592C;
+}
+
+a:active {
+  color: #78ab46;
 }
 
 p {
@@ -18,13 +34,13 @@ p {
 }
 
 h1 {
-    font-family: 'Lobster', cursive;
-    color: #14592C;
+  font-family: 'Lobster', cursive;
+  color: #14592C;
 }
 
 h3 {
-    text-align: center;
-    color: #78ab46;
+  text-align: center;
+  color: #78ab46;
 }
 
 h4 {
@@ -32,15 +48,15 @@ h4 {
 }
 
 h6 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .nav li a {
-    color: black; 
+  color: black; 
 }
 
 .nav li a:hover {
-    color: lavender;
+  color: lavender;
 }
 
 .nav li a:active {
@@ -48,16 +64,16 @@ h6 {
 }
 
 .new-client-form-question {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .question-and-answer {
-    border-bottom: 1px solid black;
-    padding-block-start: 10px;
+  border-bottom: 1px solid black;
+  padding-block-start: 10px;
 }
 
 .question-and-answer h6 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .image-and-text {
@@ -118,14 +134,14 @@ h6 {
 }
 
 footer {
-    background-color: #9EA3A3;
-    display: flex;
-    flex-wrap: wrap;
+  background-color: #9EA3A3;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-section-side {
-    display: flex;
-    width: 30%;
+  display: flex;
+  width: 30%;
 }
 
 @media screen and (max-width: 800px) {
@@ -136,22 +152,22 @@ footer {
 }
 
 .footer-section-middle {
-    flex: 1 0 0%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  flex: 1 0 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .submit-button {
-    background-color: #78ab46; 
-    border-color: #78ab46;
+  background-color: #78ab46; 
+  border-color: #78ab46;
 }
 
 section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 button[type="submit"] {
