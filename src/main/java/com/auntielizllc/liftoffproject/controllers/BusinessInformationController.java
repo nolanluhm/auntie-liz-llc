@@ -31,6 +31,12 @@ public class BusinessInformationController {
         return "services_and_pricing";
     }
 
+    @GetMapping("products-and-pricing")
+    public String displayProductsAndPricingPage(Model model) {
+        model.addAttribute("title", "Products and Pricing — Auntie Liz, LLC");
+        return "products_and_pricing";
+    }
+
     @GetMapping("testimonials")
     public String displayTestimonialsPage(Model model) {
         model.addAttribute("title", "Testimonials — Auntie Liz, LLC");
