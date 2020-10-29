@@ -45,7 +45,6 @@ public class NewClientFormDTO {
 
     @NotNull(message = "State is required.")
     @NotBlank(message = "State is required.")
-    @Size(min = 4, max = 12, message = "Please enter a state between 4 and 12 characters long.")
     private String state;
 
     @NotNull(message = "ZIP code is required.")

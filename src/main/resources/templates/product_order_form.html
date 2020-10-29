@@ -56,7 +56,11 @@
             </div>
             <div class="form-group col-md-4">
                 <label th:for="state">State</label>
-                <input class="form-control" th:field="${productOrderFormDTO.state}" placeholder="Missouri">
+                <select id="state" class="form-control" th:field="${productOrderFormDTO.state}">
+                    <option selcted value="">Choose a state...</option>
+                    <option value="illinois">Illinois</option>
+                    <option value="missouri">Missouri</option>
+                </select>
                 <p class="error" th:errors="${productOrderFormDTO.state}"></p>
             </div>
             <div class="form-group col-md-2">
