@@ -72,42 +72,42 @@
         <div class="form-group">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.handSoap}" id="handSoap">
-                <label class="form-check-label" th:for="handSoap">Hand Soap</label>
+                <label class="form-check-label" th:for="handSoap">Hand Soap <i>(scent options: lavender, lemon, orange, peppermint, or other)</i></label>
             </div>
         </div>
 
         <div class="form-group">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.barSoap}" id="barSoap">
-                <label class="form-check-label" th:for="barSoap">Bar Soap</label>
+                <label class="form-check-label" th:for="barSoap">Bar Soap <i>(scent options: lavender, lemon, orange, peppermint, or other)</i></label>
             </div>
         </div>
 
         <div class="form-group">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.lotion}" id="lotion">
-                <label class="form-check-label" th:for="lotion">Lotion</label>
+                <label class="form-check-label" th:for="lotion">Hand Lotion <i>(scent options: lavender, lemon, orange, coconut, peppermint, or other)</i></label>
             </div>
         </div>
 
         <div class="form-group">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.allPurposeCleaner}" id="allPurposeCleaner">
-                <label class="form-check-label" th:for="allPurposeCleaner">All-Purpose Cleaner</label>
+                <label class="form-check-label" th:for="allPurposeCleaner">All-Purpose Cleaner <i>(scent options: pine and citrus)</i></label>
             </div>
         </div>
 
         <div class="form-group">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.airFreshener}" id="airFreshener">
-                <label class="form-check-label" th:for="airFreshener">Air Freshener</label>
+                <label class="form-check-label" th:for="airFreshener">Air Freshener <i>(scent options: lavender, lemon, orange, peppermint, or other)</i></label>
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-12">
-                <label th:for="quantity" class="form-question">List the quantity you'd like to order of each item selected:</label>
-                <input class="form-control" th:field="${productOrderFormDTO.quantity}" placeholder="Hand Soap: 2, All-Purpose Cleaner: 3">
+                <label th:for="quantity" class="form-question">List the quantity and scent you'd like to order for each item selected:</label>
+                <input class="form-control" th:field="${productOrderFormDTO.quantity}" placeholder="Hand Soap: 2 (Coconut), All-Purpose Cleaner: 3 (Lavender)">
                 <p class="error" th:errors="${productOrderFormDTO.quantity}"></p>
             </div>
         </div>
