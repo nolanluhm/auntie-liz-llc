@@ -1,11 +1,13 @@
 package com.auntielizllc.liftoffproject.models;
 
+import org.springframework.web.bind.annotation.RequestParam;
+
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
 @Entity
-public class Order extends AbstractEntity {
+public class ProductOrder extends AbstractEntity {
 
     @NotNull
     private String firstName;
@@ -43,16 +45,10 @@ public class Order extends AbstractEntity {
     @NotNull
     private String quantity;
 
-    private Boolean isDelivery;
-    private Boolean isPickup;
+    private String deliveryMethod;
+    private String paymentMethod;
 
-    private Boolean isCashOrCheck;
-    private Boolean isVenmo;
-    private Boolean isPayPal;
-    private Boolean isFacebook;
-    private Boolean isUnsure;
-
-    public Order(@NotNull String firstName, @NotNull String lastName, @NotNull String email, @NotNull String phoneNumber, @NotNull String address, @NotNull String address2, @NotNull String city, @NotNull String state, @NotNull String zipCode, Boolean isHandSoap, Boolean isBarSoap, Boolean isLotion, Boolean isAllPurposeCleaner, Boolean isAirFreshener, @NotNull String quantity, Boolean isDelivery, Boolean isPickup, Boolean isCashOrCheck, Boolean isVenmo, Boolean isPayPal, Boolean isFacebook, Boolean isUnsure) {
+    public ProductOrder(@NotNull String firstName, @NotNull String lastName, @NotNull String email, @NotNull String phoneNumber, @NotNull String address, @NotNull String address2, @NotNull String city, @NotNull String state, @NotNull String zipCode, Boolean isHandSoap, Boolean isBarSoap, Boolean isLotion, Boolean isAllPurposeCleaner, Boolean isAirFreshener, @NotNull String quantity, @RequestParam("deliveryMethod") String deliveryMethod, @RequestParam("paymentMethod") String paymentMethod) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -68,16 +64,11 @@ public class Order extends AbstractEntity {
         this.isAllPurposeCleaner = isAllPurposeCleaner;
         this.isAirFreshener = isAirFreshener;
         this.quantity = quantity;
-        this.isDelivery = isDelivery;
-        this.isPickup = isPickup;
-        this.isCashOrCheck = isCashOrCheck;
-        this.isVenmo = isVenmo;
-        this.isPayPal = isPayPal;
-        this.isFacebook = isFacebook;
-        this.isUnsure = isUnsure;
+        this.deliveryMethod = deliveryMethod;
+        this.paymentMethod = paymentMethod;
     }
 
-    public Order() {}
+    public ProductOrder() {}
 
     public String getFirstName() {
         return firstName;
@@ -97,13 +88,11 @@ public class Order extends AbstractEntity {
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "Product Order{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
     }
-
-
 
     @Override
     public int hashCode() {

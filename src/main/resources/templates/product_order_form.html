@@ -1,10 +1,174 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-   <meta charset="UTF-8">
-   <title></title>
-</head>
+<head th:replace="fragments :: head"></head>
 <body>
+
+<header th:replace="fragments :: header"></header>
+
+<div class="container main-content">
+    <h3>Auntie Liz, LLC Product Order Form</h3>
+    <form method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label th:for="firstName">First Name</label>
+                <input class="form-control" th:field="${productOrderFormDTO.firstName}" placeholder="Jane">
+                <p class="error" th:errors="${productOrderFormDTO.firstName}"></p>
+            </div>
+            <div class="form-group col-md-6">
+                <label th:for="lastName">Last Name</label>
+                <input class="form-control" th:field="${productOrderFormDTO.lastName}" placeholder="Doe">
+                <p class="error" th:errors="${productOrderFormDTO.lastName}"></p>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label th:for="email">Email</label>
+                <input class="form-control" th:field="${productOrderFormDTO.email}" placeholder="auntielizllc@gmail.com">
+                <p class="error" th:errors="${productOrderFormDTO.email}"></p>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label th:for="phoneNumber">Phone Number</label>
+                <input class="form-control" th:field="${productOrderFormDTO.phoneNumber}" placeholder="636-495-3499">
+                <p class="error" th:errors="${productOrderFormDTO.phoneNumber}"></p>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label th:for="address">Address</label>
+                <input class="form-control" th:field="${productOrderFormDTO.address}" placeholder="1234 Main St.">
+                <p class="error" th:errors="${productOrderFormDTO.address}"></p>
+            </div>
+            <div class="form-group col-md-6">
+                <label th:for="address2">Address 2</label>
+                <input class="form-control" th:field="${productOrderFormDTO.address2}" placeholder="Apartment, studio, or floor">
+                <p class="error" th:errors="${productOrderFormDTO.address2}"></p>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label th:for="city">City</label>
+                <input class="form-control" th:field="${productOrderFormDTO.city}" placeholder="St. Louis">
+                <p class="error" th:errors="${productOrderFormDTO.city}"></p>
+            </div>
+            <div class="form-group col-md-4">
+                <label th:for="state">State</label>
+                <input class="form-control" th:field="${productOrderFormDTO.state}" placeholder="Missouri">
+                <p class="error" th:errors="${productOrderFormDTO.state}"></p>
+            </div>
+            <div class="form-group col-md-2">
+                <label th:for="zipCode">ZIP</label>
+                <input class="form-control" th:field="${productOrderFormDTO.zipCode}" placeholder="63121">
+                <p class="error" th:errors="${productOrderFormDTO.zipCode}"></p>
+            </div>
+        </div>
+        <hr>
+
+        <h6>Which product(s) would you like to order today?</h6>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.handSoap}" id="handSoap">
+                <label class="form-check-label" th:for="handSoap">Hand Soap</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.barSoap}" id="barSoap">
+                <label class="form-check-label" th:for="barSoap">Bar Soap</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.lotion}" id="lotion">
+                <label class="form-check-label" th:for="lotion">Lotion</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.allPurposeCleaner}" id="allPurposeCleaner">
+                <label class="form-check-label" th:for="allPurposeCleaner">All-Purpose Cleaner</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.airFreshener}" id="airFreshener">
+                <label class="form-check-label" th:for="airFreshener">Air Freshener</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label th:for="quantity" class="form-question">List the quantity you'd like to order of each item selected:</label>
+                <input class="form-control" th:field="${productOrderFormDTO.quantity}" placeholder="Hand Soap: 2, All-Purpose Cleaner: 3">
+                <p class="error" th:errors="${productOrderFormDTO.quantity}"></p>
+            </div>
+        </div>
+
+        <h6>How would you like to receive your products?</h6>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="deliveryMethod" id="delivery" value="delivery" checked>
+                <label class="form-check-label">Delivery (either by mail or by owner — $2 fee</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="deliveryMethod" id="pickup" value="pickup">
+                <label class="form-check-label">Pick-up (free)</label>
+            </div>
+        </div>
+
+        <h6>Auntie Liz, LLC will contact you shortly with your total price. Which payment method would you like to utilize?</h6>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="cashOrCheck" value="cashOrCheck" checked>
+                <label class="form-check-label">Cash or check upon delivery/pick-up</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="venmo" value="venmo">
+                <label class="form-check-label">Venmo (@Elizabeth-Wiley-34)</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="payPal" value="payPal">
+                <label class="form-check-label">PayPal (@ewiley1@jeffco.edu)</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="facebook" value="facebook">
+                <label class="form-check-label">Facebook Messenger</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="unsure" value="unsure">
+                <label class="form-check-label">Unsure until price is quoted</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary submit-button">Submit</button>
+    </form>
+</div>
+
+<footer th:replace="fragments :: footer"></footer>
 
 </body>
 </html>
