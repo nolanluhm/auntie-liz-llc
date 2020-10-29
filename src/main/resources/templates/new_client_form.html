@@ -18,7 +18,6 @@
                 <input class="form-control" th:field="${newClientFormDTO.lastName}" placeholder="Doe">
                 <p class="error" th:errors="${newClientFormDTO.lastName}"></p>
             </div>
-
         </div>
 
         <div class="form-row">
@@ -151,7 +150,7 @@
         </div>
 
         <div class="form-group">
-            <label th:for="instructions" class="new-client-form-question">Preferences for cleaning and pet care instructions
+            <label th:for="instructions" class="form-question">Preferences for cleaning and pet care instructions
                 (an example might be non-harsh, "green" products only or skip a certain area of the house):</label>
             <textarea class="form-control" id="cleaningAndPetInstruction" th:field="${newClientFormDTO.instructions}" rows="6"></textarea>
             <p class="error" th:errors="${newClientFormDTO.instructions}"></p>
