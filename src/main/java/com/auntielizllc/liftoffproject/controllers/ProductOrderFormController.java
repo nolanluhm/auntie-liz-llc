@@ -41,8 +41,8 @@ public class ProductOrderFormController {
                 productOrderFormDTO.getPhoneNumber(), productOrderFormDTO.getAddress(), productOrderFormDTO.getAddress2(),
                 productOrderFormDTO.getCity(), productOrderFormDTO.getState(), productOrderFormDTO.getZipCode(), productOrderFormDTO.getHandSoap(),
                 productOrderFormDTO.getBarSoap(), productOrderFormDTO.getLotion(), productOrderFormDTO.getAllPurposeCleaner(),
-                productOrderFormDTO.getAirFreshener(), productOrderFormDTO.getQuantity(), productOrderFormDTO.getDeliveryMethod(),
-                productOrderFormDTO.getPaymentMethod());
+                productOrderFormDTO.getAirFreshener(), productOrderFormDTO.getCandle(), productOrderFormDTO.getQuantity(),
+                productOrderFormDTO.getDeliveryMethod(), productOrderFormDTO.getPaymentMethod());
         productOrderRepository.save(newOrder);
 
         return "redirect:";

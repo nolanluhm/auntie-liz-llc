@@ -58,6 +58,7 @@ public class ProductOrderFormDTO {
     private Boolean isLotion;
     private Boolean isAllPurposeCleaner;
     private Boolean isAirFreshener;
+    private Boolean isCandle;
 
     @NotNull(message = "Product quantity is required.")
     @NotBlank(message = "Product quantity is required.")
@@ -177,6 +178,14 @@ public class ProductOrderFormDTO {
 
     public void setAirFreshener(Boolean airFreshener) {
         isAirFreshener = airFreshener;
+    }
+
+    public Boolean getCandle() {
+        return isCandle;
+    }
+
+    public void setCandle(Boolean candle) {
+        isCandle = candle;
     }
 
     public String getQuantity() {
