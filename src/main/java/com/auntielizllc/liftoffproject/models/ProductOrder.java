@@ -1,7 +1,5 @@
 package com.auntielizllc.liftoffproject.models;
 
-import org.springframework.web.bind.annotation.RequestParam;
-
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
@@ -42,6 +40,11 @@ public class ProductOrder extends AbstractEntity {
     private Boolean isAllPurposeCleaner;
     private Boolean isAirFreshener;
     private Boolean isCandle;
+    private Boolean isDoggieShampoo;
+    private Boolean isPbTreat;
+    private Boolean isOatmealTreat;
+    private Boolean isBandanna;
+    private Boolean isBowtie;
 
     @NotNull
     private String quantity;
@@ -49,7 +52,7 @@ public class ProductOrder extends AbstractEntity {
     private String deliveryMethod;
     private String paymentMethod;
 
-    public ProductOrder(@NotNull String firstName, @NotNull String lastName, @NotNull String email, @NotNull String phoneNumber, @NotNull String address, @NotNull String address2, @NotNull String city, @NotNull String state, @NotNull String zipCode, Boolean isHandSoap, Boolean isBarSoap, Boolean isLotion, Boolean isAllPurposeCleaner, Boolean isAirFreshener, Boolean isCandle, @NotNull String quantity, @RequestParam("deliveryMethod") String deliveryMethod, @RequestParam("paymentMethod") String paymentMethod) {
+    public ProductOrder(@NotNull String firstName, @NotNull String lastName, @NotNull String email, @NotNull String phoneNumber, @NotNull String address, @NotNull String address2, @NotNull String city, @NotNull String state, @NotNull String zipCode, Boolean isHandSoap, Boolean isBarSoap, Boolean isLotion, Boolean isAllPurposeCleaner, Boolean isAirFreshener, Boolean isCandle, Boolean isDoggieShampoo, Boolean isPbTreat, Boolean isOatmealTreat, Boolean isBandanna, Boolean isBowtie, @NotNull String quantity, String deliveryMethod, String paymentMethod) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -65,6 +68,11 @@ public class ProductOrder extends AbstractEntity {
         this.isAllPurposeCleaner = isAllPurposeCleaner;
         this.isAirFreshener = isAirFreshener;
         this.isCandle = isCandle;
+        this.isDoggieShampoo = isDoggieShampoo;
+        this.isPbTreat = isPbTreat;
+        this.isOatmealTreat = isOatmealTreat;
+        this.isBandanna = isBandanna;
+        this.isBowtie = isBowtie;
         this.quantity = quantity;
         this.deliveryMethod = deliveryMethod;
         this.paymentMethod = paymentMethod;

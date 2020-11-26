@@ -58,6 +58,11 @@ public class ProductOrderFormDTO {
     private Boolean isAllPurposeCleaner;
     private Boolean isAirFreshener;
     private Boolean isCandle;
+    private Boolean isDoggieShampoo;
+    private Boolean isPbTreat;
+    private Boolean isOatmealTreat;
+    private Boolean isBandanna;
+    private Boolean isBowtie;
 
     @NotNull(message = "Product quantity is required.")
     @NotBlank(message = "Product quantity is required.")
@@ -185,6 +190,46 @@ public class ProductOrderFormDTO {
 
     public void setCandle(Boolean candle) {
         isCandle = candle;
+    }
+
+    public Boolean getDoggieShampoo() {
+        return isDoggieShampoo;
+    }
+
+    public void setDoggieShampoo(Boolean doggieShampoo) {
+        isDoggieShampoo = doggieShampoo;
+    }
+
+    public Boolean getPbTreat() {
+        return isPbTreat;
+    }
+
+    public void setPbTreat(Boolean pbTreat) {
+        isPbTreat = pbTreat;
+    }
+
+    public Boolean getOatmealTreat() {
+        return isOatmealTreat;
+    }
+
+    public void setOatmealTreat(Boolean oatmealTreat) {
+        isOatmealTreat = oatmealTreat;
+    }
+
+    public Boolean getBandanna() {
+        return isBandanna;
+    }
+
+    public void setBandanna(Boolean bandanna) {
+        isBandanna = bandanna;
+    }
+
+    public Boolean getBowtie() {
+        return isBowtie;
+    }
+
+    public void setBowtie(Boolean bowtie) {
+        isBowtie = bowtie;
     }
 
     public String getQuantity() {

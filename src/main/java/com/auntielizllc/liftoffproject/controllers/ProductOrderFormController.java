@@ -37,12 +37,14 @@ public class ProductOrderFormController {
             return "product_order_form";
         }
 
-        ProductOrder newOrder = new ProductOrder(productOrderFormDTO.getFirstName(), productOrderFormDTO.getLastName(), productOrderFormDTO.getEmail(),
-                productOrderFormDTO.getPhoneNumber(), productOrderFormDTO.getAddress(), productOrderFormDTO.getAddress2(),
-                productOrderFormDTO.getCity(), productOrderFormDTO.getState(), productOrderFormDTO.getZipCode(), productOrderFormDTO.getHandSoap(),
-                productOrderFormDTO.getBarSoap(), productOrderFormDTO.getLotion(), productOrderFormDTO.getAllPurposeCleaner(),
-                productOrderFormDTO.getAirFreshener(), productOrderFormDTO.getCandle(), productOrderFormDTO.getQuantity(),
-                productOrderFormDTO.getDeliveryMethod(), productOrderFormDTO.getPaymentMethod());
+        ProductOrder newOrder = new ProductOrder(productOrderFormDTO.getFirstName(), productOrderFormDTO.getLastName(),
+                productOrderFormDTO.getEmail(), productOrderFormDTO.getPhoneNumber(), productOrderFormDTO.getAddress(),
+                productOrderFormDTO.getAddress2(), productOrderFormDTO.getCity(), productOrderFormDTO.getState(),
+                productOrderFormDTO.getZipCode(), productOrderFormDTO.getHandSoap(), productOrderFormDTO.getBarSoap(),
+                productOrderFormDTO.getLotion(), productOrderFormDTO.getAllPurposeCleaner(), productOrderFormDTO.getAirFreshener(),
+                productOrderFormDTO.getCandle(), productOrderFormDTO.getDoggieShampoo(), productOrderFormDTO.getPbTreat(),
+                productOrderFormDTO.getOatmealTreat(), productOrderFormDTO.getBandanna(), productOrderFormDTO.getBowtie(),
+                productOrderFormDTO.getQuantity(), productOrderFormDTO.getDeliveryMethod(), productOrderFormDTO.getPaymentMethod());
         productOrderRepository.save(newOrder);
 
         return "redirect:";
