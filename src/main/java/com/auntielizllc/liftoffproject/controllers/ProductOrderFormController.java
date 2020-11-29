@@ -43,9 +43,10 @@ public class ProductOrderFormController {
                 productOrderFormDTO.getZipCode(), productOrderFormDTO.getHandSoap(), productOrderFormDTO.getBarSoap(),
                 productOrderFormDTO.getLotion(), productOrderFormDTO.getAllPurposeCleaner(), productOrderFormDTO.getAirFreshener(),
                 productOrderFormDTO.getCandle(), productOrderFormDTO.getDoggieShampoo(), productOrderFormDTO.getPbTreat(),
-                productOrderFormDTO.getOatmealTreat(), productOrderFormDTO.getTunaTreat(), productOrderFormDTO.getCatToy(),
-                productOrderFormDTO.getBandanna(), productOrderFormDTO.getBowtie(), productOrderFormDTO.getQuantity(),
-                productOrderFormDTO.getDeliveryMethod(), productOrderFormDTO.getPaymentMethod());
+                productOrderFormDTO.getOatmealTreat(), productOrderFormDTO.getDoggieCake(),
+                productOrderFormDTO.getTunaTreat(), productOrderFormDTO.getCatToy(), productOrderFormDTO.getBandanna(),
+                productOrderFormDTO.getBowtie(), productOrderFormDTO.getQuantity(), productOrderFormDTO.getDeliveryMethod(),
+                productOrderFormDTO.getPaymentMethod());
         productOrderRepository.save(newOrder);
 
         return "redirect:";

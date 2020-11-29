@@ -200,6 +200,14 @@
 
         <div class="form-group">
             <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.doggieCake}" id="doggieCake">
+                <label class="form-check-label" th:for="doggieCake">Penny's Big Ole' Birthday Cake <i>(flavors:
+                    oatmeal and pumpkin or peanut butter and banana) (cut-out options: bone, circle, heart, square, or triangle)</i></label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
                 <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.tunaTreat}" id="tunaTreat">
                 <label class="form-check-label" th:for="tunaTreat">Tricky Tuna Treats</label>
             </div>

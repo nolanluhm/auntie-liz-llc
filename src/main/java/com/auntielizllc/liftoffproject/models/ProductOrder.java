@@ -43,6 +43,7 @@ public class ProductOrder extends AbstractEntity {
     private Boolean isDoggieShampoo;
     private Boolean isPbTreat;
     private Boolean isOatmealTreat;
+    private Boolean isDoggieCake;
     private Boolean isTunaTreat;
     private Boolean isCatToy;
     private Boolean isBandanna;
@@ -54,7 +55,7 @@ public class ProductOrder extends AbstractEntity {
     private String deliveryMethod;
     private String paymentMethod;
 
-    public ProductOrder(@NotNull String firstName, @NotNull String lastName, @NotNull String email, @NotNull String phoneNumber, @NotNull String address, @NotNull String address2, @NotNull String city, @NotNull String state, @NotNull String zipCode, Boolean isHandSoap, Boolean isBarSoap, Boolean isLotion, Boolean isAllPurposeCleaner, Boolean isAirFreshener, Boolean isCandle, Boolean isDoggieShampoo, Boolean isPbTreat, Boolean isOatmealTreat, Boolean isTunaTreat, Boolean isCatToy, Boolean isBandanna, Boolean isBowtie, @NotNull String quantity, String deliveryMethod, String paymentMethod) {
+    public ProductOrder(@NotNull String firstName, @NotNull String lastName, @NotNull String email, @NotNull String phoneNumber, @NotNull String address, @NotNull String address2, @NotNull String city, @NotNull String state, @NotNull String zipCode, Boolean isHandSoap, Boolean isBarSoap, Boolean isLotion, Boolean isAllPurposeCleaner, Boolean isAirFreshener, Boolean isCandle, Boolean isDoggieShampoo, Boolean isPbTreat, Boolean isOatmealTreat, Boolean isDoggieCake, Boolean isTunaTreat, Boolean isCatToy, Boolean isBandanna, Boolean isBowtie, @NotNull String quantity, String deliveryMethod, String paymentMethod) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -73,6 +74,7 @@ public class ProductOrder extends AbstractEntity {
         this.isDoggieShampoo = isDoggieShampoo;
         this.isPbTreat = isPbTreat;
         this.isOatmealTreat = isOatmealTreat;
+        this.isDoggieCake = isDoggieCake;
         this.isTunaTreat = isTunaTreat;
         this.isCatToy = isCatToy;
         this.isBandanna = isBandanna;

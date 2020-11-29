@@ -61,6 +61,7 @@ public class ProductOrderFormDTO {
     private Boolean isDoggieShampoo;
     private Boolean isPbTreat;
     private Boolean isOatmealTreat;
+    private Boolean isDoggieCake;
     private Boolean isTunaTreat;
     private Boolean isCatToy;
     private Boolean isBandanna;
@@ -216,6 +217,14 @@ public class ProductOrderFormDTO {
 
     public void setOatmealTreat(Boolean oatmealTreat) {
         isOatmealTreat = oatmealTreat;
+    }
+
+    public Boolean getDoggieCake() {
+        return isDoggieCake;
+    }
+
+    public void setDoggieCake(Boolean doggieCake) {
+        isDoggieCake = doggieCake;
     }
 
     public Boolean getTunaTreat() {
