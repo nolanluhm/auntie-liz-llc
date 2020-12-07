@@ -58,6 +58,8 @@ public class NewClientFormDTO {
     private Boolean isDishes;
     private Boolean isCarpetShampooing;
     private Boolean isWallCleaning;
+    private Boolean isDogBathing;
+    private Boolean isRecycling;
     private Boolean isCarWash;
     private Boolean isPetNailTrim;
     private Boolean isPetEarCleaning;
@@ -188,6 +190,22 @@ public class NewClientFormDTO {
 
     public void setWallCleaning(Boolean wallCleaning) {
         isWallCleaning = wallCleaning;
+    }
+
+    public Boolean getDogBathing() {
+        return isDogBathing;
+    }
+
+    public void setDogBathing(Boolean dogBathing) {
+        isDogBathing = dogBathing;
+    }
+
+    public Boolean getRecycling() {
+        return isRecycling;
+    }
+
+    public void setRecycling(Boolean recycling) {
+        isRecycling = recycling;
     }
 
     public Boolean getCarWash() {

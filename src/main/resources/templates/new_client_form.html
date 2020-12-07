@@ -107,6 +107,20 @@
 
         <div class="form-group">
             <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${newClientFormDTO.dogBathing}" id="dogBathing">
+                <label class="form-check-label" th:for="dogBathing">Dog Bathing</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${newClientFormDTO.recycling}" id="recycling">
+                <label class="form-check-label" th:for="recycling">Recycling</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
                 <input class="form-check-input" type="checkbox" th:field="${newClientFormDTO.carWash}" id="carWash">
                 <label class="form-check-label" th:for="carWash">Car wash</label>
             </div>
