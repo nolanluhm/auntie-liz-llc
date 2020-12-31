@@ -271,7 +271,7 @@ button[type="submit"] {
   font-size: 20px;
 }
 
-#order-text {
+.order-text {
   text-align: center;
   font-size: 32px;
   font-weight: bold;

@@ -54,12 +54,16 @@ public class ProductOrderFormDTO {
 
     private Boolean isHandSoap;
     private Boolean isBarSoap;
+    private Boolean isDishSoap;
+    private Boolean isLaundryDetergent;
     private Boolean isLotion;
     private Boolean isAllPurposeCleaner;
     private Boolean isAirFreshener;
     private Boolean isCandle;
     private Boolean isDoggieShampoo;
-    private Boolean isPbTreat;
+    private Boolean isPbBananaTreat;
+    private Boolean isPbAppleTreat;
+    private Boolean isPbPillPocket;
     private Boolean isOatmealTreat;
     private Boolean isDoggieCake;
     private Boolean isTunaTreat;
@@ -163,6 +167,22 @@ public class ProductOrderFormDTO {
         isBarSoap = barSoap;
     }
 
+    public Boolean getDishSoap() {
+        return isDishSoap;
+    }
+
+    public void setDishSoap(Boolean dishSoap) {
+        isDishSoap = dishSoap;
+    }
+
+    public Boolean getLaundryDetergent() {
+        return isLaundryDetergent;
+    }
+
+    public void setLaundryDetergent(Boolean laundryDetergent) {
+        isLaundryDetergent = laundryDetergent;
+    }
+
     public Boolean getLotion() {
         return isLotion;
     }
@@ -203,12 +223,28 @@ public class ProductOrderFormDTO {
         isDoggieShampoo = doggieShampoo;
     }
 
-    public Boolean getPbTreat() {
-        return isPbTreat;
+    public Boolean getPbBananaTreat() {
+        return isPbBananaTreat;
     }
 
-    public void setPbTreat(Boolean pbTreat) {
-        isPbTreat = pbTreat;
+    public void setPbBananaTreat(Boolean pbBananaTreat) {
+        isPbBananaTreat = pbBananaTreat;
+    }
+
+    public Boolean getPbAppleTreat() {
+        return isPbAppleTreat;
+    }
+
+    public void setPbAppleTreat(Boolean pbAppleTreat) {
+        isPbAppleTreat = pbAppleTreat;
+    }
+
+    public Boolean getPbPillPocket() {
+        return isPbPillPocket;
+    }
+
+    public void setPbPillPocket(Boolean pbPillPocket) {
+        isPbPillPocket = pbPillPocket;
     }
 
     public Boolean getOatmealTreat() {

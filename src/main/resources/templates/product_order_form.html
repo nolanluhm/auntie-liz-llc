@@ -142,6 +142,24 @@
 
         <div class="form-group">
             <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.dishSoap}" id="dishSoap">
+                <label class="form-check-label" th:for="dishSoap">Dish Soap <i>(scent options: apple, blueberry, cedar/pine, cherry, chocolate,
+                    cinnamon, coffee, cucumber melon, cupcake, fresh linen, gardenia, grapefruit, honey, honeysuckle, jasmine, lavender, lemon,
+                    lilac, magnolia, mango, orange, peach, peppermint, rose, spa, strawberry, vanilla, or watermelon.)</i></label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.laundryDetergent}" id="laundryDetergent">
+                <label class="form-check-label" th:for="laundryDetergent">Laundry Detergent <i>(scent options: apple, blueberry, cedar/pine, cherry, chocolate,
+                    cinnamon, coffee, cucumber melon, cupcake, fresh linen, gardenia, grapefruit, honey, honeysuckle, jasmine, lavender, lemon,
+                    lilac, magnolia, mango, orange, peach, peppermint, rose, spa, strawberry, vanilla, or watermelon.)</i></label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
                 <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.lotion}" id="lotion">
                 <label class="form-check-label" th:for="lotion">Hand Lotion <i>(scent options: apple, blueberry, cedar/pine, cherry, chocolate,
                     cinnamon, coffee, cucumber melon, cupcake, fresh linen, gardenia, grapefruit, honey, honeysuckle, jasmine, lavender, lemon,
@@ -184,9 +202,24 @@
 
         <div class="form-group">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.pbTreat}" id="pbTreat">
-                <label class="form-check-label" th:for="pbTreat">Penny's Peanut Butter and Banana Dog Treats <i>(cut-out options:
-                    bone, circle, heart, person, or star)</i></label>
+                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.pbBananaTreat}" id="pbBananaTreat">
+                <label class="form-check-label" th:for="pbBananaTreat">Penny's Peanut Butter and Banana Dog Treats <i>(cut-out options:
+                    bone, circle, heart, person, square, star, or triangle)</i></label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.pbAppleTreat}" id="pbAppleTreat">
+                <label class="form-check-label" th:for="pbAppleTreat">Penny's Peanut Butter and Apple Dog Treats <i>(cut-out options:
+                    bone, circle, heart, person, square, star, or triangle)</i></label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.pbPillPocket}" id="pbPillPocket">
+                <label class="form-check-label" th:for="pbPillPocket">Peanut Butter Pill Pocket</label>
             </div>
         </div>
 
@@ -194,7 +227,7 @@
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.oatmealTreat}" id="oatmealTreat">
                 <label class="form-check-label" th:for="oatmealTreat">Penny's Oatmeal and Pumpkin Dog Treats <i>(cut-out options:
-                    bone, circle, heart, person, or star)</i></label>
+                    bone, circle, heart, person, square, star, or triangle)</i></label>
             </div>
         </div>
 
@@ -202,7 +235,8 @@
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" th:field="${productOrderFormDTO.doggieCake}" id="doggieCake">
                 <label class="form-check-label" th:for="doggieCake">Penny's Big Ole' Birthday Cake <i>(flavors:
-                    oatmeal and pumpkin or peanut butter and banana) (cut-out options: bone, circle, heart, square, or triangle)</i></label>
+                    oatmeal and pumpkin, peanut butter and banana, or peanut butter and apple)
+                    (cut-out options: bone, circle, heart, person, square, star, or triangle)</i></label>
             </div>
         </div>
 

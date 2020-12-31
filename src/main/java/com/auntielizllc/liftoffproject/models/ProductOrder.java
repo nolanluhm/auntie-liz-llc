@@ -36,12 +36,16 @@ public class ProductOrder extends AbstractEntity {
 
     private Boolean isHandSoap;
     private Boolean isBarSoap;
+    private Boolean isDishSoap;
+    private Boolean isLaundryDetergent;
     private Boolean isLotion;
     private Boolean isAllPurposeCleaner;
     private Boolean isAirFreshener;
     private Boolean isCandle;
     private Boolean isDoggieShampoo;
-    private Boolean isPbTreat;
+    private Boolean isPbBananaTreat;
+    private Boolean isPbAppleTreat;
+    private Boolean isPbPillPocket;
     private Boolean isOatmealTreat;
     private Boolean isDoggieCake;
     private Boolean isTunaTreat;
@@ -55,7 +59,7 @@ public class ProductOrder extends AbstractEntity {
     private String deliveryMethod;
     private String paymentMethod;
 
-    public ProductOrder(@NotNull String firstName, @NotNull String lastName, @NotNull String email, @NotNull String phoneNumber, @NotNull String address, @NotNull String address2, @NotNull String city, @NotNull String state, @NotNull String zipCode, Boolean isHandSoap, Boolean isBarSoap, Boolean isLotion, Boolean isAllPurposeCleaner, Boolean isAirFreshener, Boolean isCandle, Boolean isDoggieShampoo, Boolean isPbTreat, Boolean isOatmealTreat, Boolean isDoggieCake, Boolean isTunaTreat, Boolean isCatToy, Boolean isBandanna, Boolean isBowtie, @NotNull String quantity, String deliveryMethod, String paymentMethod) {
+    public ProductOrder(@NotNull String firstName, @NotNull String lastName, @NotNull String email, @NotNull String phoneNumber, @NotNull String address, @NotNull String address2, @NotNull String city, @NotNull String state, @NotNull String zipCode, Boolean isHandSoap, Boolean isBarSoap, Boolean isDishSoap, Boolean isLaundryDetergent, Boolean isLotion, Boolean isAllPurposeCleaner, Boolean isAirFreshener, Boolean isCandle, Boolean isDoggieShampoo, Boolean isPbBananaTreat, Boolean isPbAppleTreat, Boolean isPbPillPocket, Boolean isOatmealTreat, Boolean isDoggieCake, Boolean isTunaTreat, Boolean isCatToy, Boolean isBandanna, Boolean isBowtie, @NotNull String quantity, String deliveryMethod, String paymentMethod) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -67,12 +71,16 @@ public class ProductOrder extends AbstractEntity {
         this.zipCode = zipCode;
         this.isHandSoap = isHandSoap;
         this.isBarSoap = isBarSoap;
+        this.isDishSoap = isDishSoap;
+        this.isLaundryDetergent = isLaundryDetergent;
         this.isLotion = isLotion;
         this.isAllPurposeCleaner = isAllPurposeCleaner;
         this.isAirFreshener = isAirFreshener;
         this.isCandle = isCandle;
         this.isDoggieShampoo = isDoggieShampoo;
-        this.isPbTreat = isPbTreat;
+        this.isPbBananaTreat = isPbBananaTreat;
+        this.isPbAppleTreat = isPbAppleTreat;
+        this.isPbPillPocket = isPbPillPocket;
         this.isOatmealTreat = isOatmealTreat;
         this.isDoggieCake = isDoggieCake;
         this.isTunaTreat = isTunaTreat;
