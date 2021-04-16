@@ -173,14 +173,14 @@
         </div>
 
         <div class="form-group">
-            <label th:for="instructions" class="form-question">Preferences for cleaning and pet care instructions
-                (an example might be non-harsh, "green" products only or skip a certain area of the house):</label>
+            <label th:for="instructions" class="form-question">Notes for preferences regarding cleaning and/or pet care instructions
+                (examples might be non-harsh, "green" products only or skip a certain area of the house):</label>
             <textarea class="form-control" id="cleaningAndPetInstruction" th:field="${newClientFormDTO.instructions}" rows="6"></textarea>
             <p class="error" th:errors="${newClientFormDTO.instructions}"></p>
         </div>
 
         <h6>Options for payment:</h6>
-        <p>Cash, check, Venmo, PayPal, Facebook Messenger, payment plans</p>
+        <p>Cash, Check, Venmo, PayPal, Facebook Messenger, Payment plans</p>
 
         <h6>Do you qualify for one of my offered discounts? (choose all that apply):</h6>
 
@@ -213,6 +213,7 @@
                 Although inconvenient, Auntie Liz, LLC is a small business that came to creation for a better work-life balance.</li>
             <li>Pet sitting services are under agreement that veterinary expenses will be the sole responsibility of the pet's owner.
                 Signing below indicates that you’ve read and understood our work arrangement.</li>
+            <li>Auntie Liz, LLC, as well as all of their clients, have the right to terminate services at any time, for any reason.</li>
         </ol>
 
         <div class="form-row">
