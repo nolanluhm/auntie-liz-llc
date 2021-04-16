@@ -39,6 +39,7 @@ public class Customer extends AbstractEntity {
     private Boolean isDishes;
     private Boolean isCarpetShampooing;
     private Boolean isWallCleaning;
+    private Boolean isOrganizationalAssistance;
     private Boolean isDogBathing;
     private Boolean isRecylcing;
     private Boolean isCarWash;
@@ -59,7 +60,7 @@ public class Customer extends AbstractEntity {
     @NotNull
     private String signature;
 
-    public Customer(@NotNull String firstName, @NotNull String lastName, @NotNull String email, @NotNull String phoneNumber, @NotNull String address, @NotNull String address2, @NotNull String city, @NotNull String state, @NotNull String zipCode, Boolean isGeneralHousekeeping, Boolean isLaundry, Boolean isDishes, Boolean isCarpetShampooing, Boolean isWallCleaning, Boolean isDogBathing, Boolean isRecylcing, Boolean isCarWash, Boolean isPetNailTrim, Boolean isPetEarCleaning, Boolean isPetAnalGlandExpression, Boolean isPetMedicine, AppointmentType type, @NotNull String instructions, Boolean isNursingHomeEmployee, Boolean isVeteran, Boolean isSeniorCitizen, @NotNull String signature) {
+    public Customer(@NotNull String firstName, @NotNull String lastName, @NotNull String email, @NotNull String phoneNumber, @NotNull String address, @NotNull String address2, @NotNull String city, @NotNull String state, @NotNull String zipCode, Boolean isGeneralHousekeeping, Boolean isLaundry, Boolean isDishes, Boolean isCarpetShampooing, Boolean isWallCleaning, Boolean isOrganizationalAssistance, Boolean isDogBathing, Boolean isRecylcing, Boolean isCarWash, Boolean isPetNailTrim, Boolean isPetEarCleaning, Boolean isPetAnalGlandExpression, Boolean isPetMedicine, AppointmentType type, @NotNull String instructions, Boolean isNursingHomeEmployee, Boolean isVeteran, Boolean isSeniorCitizen, @NotNull String signature) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -74,6 +75,7 @@ public class Customer extends AbstractEntity {
         this.isDishes = isDishes;
         this.isCarpetShampooing = isCarpetShampooing;
         this.isWallCleaning = isWallCleaning;
+        this.isOrganizationalAssistance = isOrganizationalAssistance;
         this.isDogBathing = isDogBathing;
         this.isRecylcing = isRecylcing;
         this.isCarWash = isCarWash;

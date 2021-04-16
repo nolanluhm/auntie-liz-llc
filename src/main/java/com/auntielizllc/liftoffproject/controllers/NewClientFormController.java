@@ -44,7 +44,7 @@ public class NewClientFormController {
                                             newClientFormDTO.getPhoneNumber(), newClientFormDTO.getAddress(), newClientFormDTO.getAddress2(),
                                             newClientFormDTO.getCity(), newClientFormDTO.getState(), newClientFormDTO.getZipCode(), newClientFormDTO.getGeneralHousekeeping(),
                                             newClientFormDTO.getLaundry(), newClientFormDTO.getDishes(), newClientFormDTO.getCarpetShampooing(), newClientFormDTO.getWallCleaning(),
-                                            newClientFormDTO.getDogBathing(), newClientFormDTO.getRecycling(),
+                                            newClientFormDTO.getOrganizationalAssistance(), newClientFormDTO.getDogBathing(), newClientFormDTO.getRecycling(),
                                             newClientFormDTO.getCarWash(), newClientFormDTO.getPetNailTrim(), newClientFormDTO.getPetEarCleaning(),
                                             newClientFormDTO.getPetAnalGlandExpression(), newClientFormDTO.getPetMedicine(), newClientFormDTO.getType(),
                                             newClientFormDTO.getInstructions(), newClientFormDTO.getNursingHomeEmployee(), newClientFormDTO.getVeteran(),
